@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block title %}{{ about.title }}{% endblock %}
+
+{% block content %}
+    <div class="page-header"><h1>{{ about.title }}</h1></div>
+    <ul>
+        <li>{{ about.name }}</li>
+        <li>Company: {{ about.company }}</li>
+        <li>Date Updated: {{ about.pub_date }}</li>
+    </ul>
+
+    <p>
+        {{ about.bio|safe|linebreaks }}
+    </p>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'header.html' %}
+{% load static %}
+
+{% block title %}{{ contact.title }}{% endblock %}
+
+{% block content %}
+    <div class="page-header"><h1>{{ contact.title }}</h1></div>
+    <ul>
+        <li><a href="{{ contact.facebook }}">Facebook</a></li>
+        <li><a href="{{ contact.github }}">Github</a></li>
+        <li><a href="mailto:{{ contact.email }}">Email</a></li>
+    </ul>
+
+    {{ form }}
+{% endblock %}

@@ -1,4 +1,4 @@
-MyBlog
+**MyBlog**
 
 *Work in Progress*
 
@@ -16,6 +16,7 @@ This project is in the process of being updated to follow best practices as outl
 Update Log:
 
 6-JAN-2017 update:
+
     Added bootstrap
     Created a header to apply to all apps and placed it in the home directory's templates folder
     Created a home app that the index URL routes to.
@@ -27,6 +28,7 @@ Update Log:
 
 
 9-JAN-2017 update:
+
     Header:
         navbar
         logo

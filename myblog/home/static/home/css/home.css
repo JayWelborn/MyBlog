@@ -68,6 +68,7 @@
     margin-right: auto;
 }
 
-.col {
-    padding: 2.5%
+.blurb {
+    font-size: 120%;
+    padding: 30px;
 }

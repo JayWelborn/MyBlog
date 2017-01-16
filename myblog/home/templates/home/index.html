@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block jumbotron %}
-    <div class="bg"></div>
-    <div class="jumbotron">
+    <div class="bg bg-index"></div>
+    <div class="jumbotron vertical-center">
         <div class="jumbotron-text">
             <h1>Hello, World!</h1>
             <p>My name is Jay</p>
@@ -12,12 +12,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container center">
-        <h1 class="center">I made this website for fun.</h1>
-        <h4 class="center">
+    <div class="container-fluid center">
+        <h1 class="center"><strong>I made this website for fun.</strong></h1>
+        <h3 class="center">
             It wouldn't have been possible without the following
             open source technologies:
-        </h4>
+        </h3>
+        <br/>
+        <br/>
+        <br/>
         <br/>
     </div>
     <div class="container center">
@@ -76,9 +79,8 @@
                 <img class="logo" src="{% static 'images/JS.png' %}"/>
                 <p class="blurb">
                     JavaScript is a programming language that runs
-                    inside web browsers on the user's machine. JavaScript
-                    allows for elements to be dynamically edited on the
-                    fly based on everything from screen size to user actions.
+                    inside the user's web browsers. It allows for elements to
+                    be dynamically edited on the fly.
                     I have barely used any of it, but what I have used adds
                     a nice touch and makes the site a little more responsive.
                     I'm definitely going to try and incorporate JavaScript more

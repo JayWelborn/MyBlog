@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
     <link rel="shortcut icon" type="image/png" href="{% static 'jd32x32.png' %}"/>
     <title>{% block title %}Jdevelops{% endblock %}</title>
 </head>
@@ -24,7 +24,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,8 +53,8 @@
         </div>
     </nav>
 
-    {% block jumbotron %}
-    {% endblock %}
+        {% block jumbotron %}
+        {% endblock %}
 
     <div class="container">
         {% block content %}
@@ -64,7 +63,7 @@
     </div>
     <br/>
     <footer class="footer nav navbar-inverse">
-        <div class="container">
+        <div class="container-fluid">
             <a href="{% url 'home:index' %}">Home</a>
             &nbsp;
             <a href="{% url 'blog:index' %}">Blog</a>
@@ -72,7 +71,6 @@
             <a href="{% url 'polls:index' %}">Polls</a>
         </div>
     </footer>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'home/js/home.js' %}"></script>

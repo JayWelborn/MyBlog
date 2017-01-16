@@ -1,40 +1,53 @@
 {% load static %}
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 .bg {
-    background: url('../../images/jumbotron-test.png') no-repeat center center;
     position: fixed;
     width: 100%;
-    height: calc(100vh); /*same height as jumbotron */
+    height: 78vh; /*same height as jumbotron */
+    max-height: 1080px;
     top:0;
     left:0;
     z-index: -1;
 }
 
+.bg-index {
+    background: url('../../images/jumbotron-test.png') no-repeat center center;
+}
+
+.bg-about {
+    background: url('../../images/me.jpg') no-repeat center center;
+}
+
 .jumbotron {
     position: relative;
-    height: calc(100vh);
+    height: 78vh;
+    max-height: 1080px;
     color: #FFFFFF;
     background:transparent;
     font-family: 'Anton', monospace;
 }
 
 .jumbotron-text {
-    text-shadow: 3px 10px 10px #2a2a2a;
-    width = 100%;
-    position: center;
+    text-shadow: 5px 10px 10px #2a2a2a;
     text-align: center;
-    padding-top: 20vh;
 }
 
 .jumbotron h1 {
-    font-size: 8vw;
+    font-size: 14vh;
 }
 
 .jumbotron p {
-    font-size: 5vw;
+    font-size: 9vh;
 }
 
 .footer {
+    position: absolute;
+    bottom: 0px;
     width: 100%;
     background-color: #1b1b1b;
     background-image: -moz-linear-gradient(top, #222222, #111111);
@@ -68,7 +81,53 @@
     margin-right: auto;
 }
 
+.logo {
+    max-height: 150px;
+}
+
 .blurb {
     font-size: 120%;
     padding: 30px;
+}
+
+.page-header {
+    padding-top: 1.5%;
+}
+
+.portrait {
+    float: left;
+    display: block;
+    max-width:300px;
+    width: auto;
+    height: auto;
+    padding-right: 2.5%
+}
+
+.vertical-center {
+    display: -webkit-box;
+    display: -moz-box
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+
+.about {
+    max-width: 10000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+.about ul {
+    font-size: 150%;
+    list-style-type: none;
+    text-align: center
+}
+
+.bio {
+    font-size: 120%;
 }

@@ -15,7 +15,7 @@ class ContactForm(forms.Form):
         # send email
         print('email sent.')
 
-        sender = self.sender
+        sender = self.email
         subject = self.subject
         message = self.message
 

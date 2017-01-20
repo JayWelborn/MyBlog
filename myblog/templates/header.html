@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="shortcut icon" type="image/png" href="{% static 'jd32x32.png' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'jw32x32.png' %}"/>
     <title>{% block title %}Jdevelops{% endblock %}</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
                 <ul class="nav navbar-nav">
                     <li>
                         <a id="brand" href="{% url 'home:index' %}">
-                            <img alt="Jdevelops" src="{% static 'jd32x32.png' %}"/>
+                            <img alt="Jay Welborn" src="{% static 'jwbrand.png' %}"/>
                         </a>
                     </li>
                     <li><a href="{% url 'home:index' %}">Home</a></li>

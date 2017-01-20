@@ -12,7 +12,7 @@
     <title>{% block title %}Jdevelops{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-nav navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -66,9 +66,11 @@
         <div class="container-fluid">
             <a href="{% url 'home:index' %}">Home</a>
             &nbsp;
-            <a href="{% url 'blog:index' %}">Blog</a>
+            <a href="{% url 'home:about' %}">About</a>
             &nbsp;
-            <a href="{% url 'polls:index' %}">Polls</a>
+            <a href="{% url 'home:contact' %}">Contact</a>
+            &nbsp;
+            <a href="{% url 'blog:index' %}">Blog</a>
         </div>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -101,7 +101,8 @@ html {
 .portrait {
     float: left;
     display: block;
-    max-width:300px;
+    width: 66%;
+    max-width: 472px;
     width: auto;
     height: auto;
     padding-right: 2.5%
@@ -143,7 +144,7 @@ html {
     font-weight: bold;
 }
 
-.contact .button {
+.contact .button, .contact-form input[type=submit] {
     font-family: 'Open Sans';
     font-size: 14px;
     display: inline-block;
@@ -151,14 +152,14 @@ html {
     text-decoration: none;
     color: #fefefe;
     background: #0074D9;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: .5em 1em;
     letter-spacing: .1em;
     transition: all .5s;
     -webkit-transition: all .4s;
 }
 
-.contact .button:hover {
+.contact .button:hover, .contact-form input[type=submit]:hover {
     box-shadow: 0px 0px 0px 2px white, 0px 0px 2px 4px #0074D9;
 }
 
@@ -169,20 +170,62 @@ html {
 .contact-form {
     padding-bottom: 50px;
     font-family: 'Open Sans';
-    background-color: ;
 }
 
 .contact-form label {
-    min-width: 100px;
+    min-width: 100%;
 }
 
-.contact-form input{
-    border-radius: 3px;
+.contact-form input[type=text], input[type=email], textarea {
+    border: none;
+    border-top: 1px solid #AAA;
+    border-right: 1px solid #AAA;
+    border-left: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+    margin: 2px;
+    padding: 2px 2px 2px 4px;
+    border-radius: 5px;
+}
+
+.contact-form input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    background-color: #FFF8DE;
+    border: 2px solid #555;
+    margin: 1px;
 }
 
 .contact-form textarea {
-    border-radius: 3px;
     resize: none;
+}
+
+.contact-form input[type=checkbox] {
+    -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+}
+
+.contact-form input[type=checkbox]:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.contact-form input[type=checkbox]:checked {
+    background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+.contact-form input[type=checkbox]:checked:after {
+    content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #0044A9;
 }
 
 

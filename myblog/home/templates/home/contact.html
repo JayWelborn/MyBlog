@@ -4,13 +4,37 @@
 {% block title %}{{ contact.title }}{% endblock %}
 
 {% block content %}
-    <div class="page-header"><h1>{{ contact.title }}</h1></div>
-    <img class="portrait" src="{% static 'images/me.jpg' %}"/>
-    <ul>
-        <li><a href="{{ contact.facebook }}">Facebook</a></li>
-        <li><a href="{{ contact.github }}">Github</a></li>
-        <li><a href="mailto:{{ contact.email }}">Email</a></li>
-    </ul>
 
-    {{ form }}
+    <div class="page-header"><h1>{{ contact.title }}</h1></div>
+    <div class="container">
+    <img class="portrait" src="{% static 'images/london-7.jpg' %}"/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-m-4 col">
+                <ul class="contact">
+                    <li>
+                        <a href="{{ contact.facebook }}">
+                            <img class="icon" src="{% static 'images/facebook-icon.png' %}"/>
+                        </a>
+                        <a class="button" href="{{ contact.facebook }}">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="{{ contact.github }}">
+                            <img class="icon" src="{% static 'images/github-icon.png' %}"
+                        </a>
+                        <a class="button" href="{{ contact.github }}">Github</a>
+                    </li>
+                </ul>
+                <hr>
+                <form action="" method="post" class="contact-form">
+                    {% csrf_token %}
+                    <ul class="contact">
+                        {{ form.as_ul }}
+                        <li><input type="submit" value="Email Me!"></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}

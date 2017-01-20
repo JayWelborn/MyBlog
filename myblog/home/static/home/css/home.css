@@ -1,8 +1,8 @@
 {% load static %}
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 .bg {
@@ -26,10 +26,11 @@ html {
 .jumbotron {
     position: relative;
     height: 78vh;
+    min-width: 100%;
     max-height: 1080px;
     color: #FFFFFF;
     background:transparent;
-    font-family: 'Anton', monospace;
+    font-family: 'Open Sans', monospace;
 }
 
 .jumbotron-text {
@@ -61,7 +62,8 @@ html {
     padding: 10px;
 }
 .footer a{
-    color: #9d9d9d;
+    color: #777;
+    text-decoration: none;
 }
 .footer a:hover{
     color: #fff
@@ -83,6 +85,8 @@ html {
 
 .logo {
     max-height: 150px;
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+	drop-shadow(12px 12px 7px rgba(0,0,0,0.5)););
 }
 
 .blurb {
@@ -131,3 +135,54 @@ html {
 .bio {
     font-size: 120%;
 }
+
+.contact {
+    list-style-type: none;
+    font-size: 120%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.contact .button {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    display: inline-block;
+    margin: 4px 0;
+    text-decoration: none;
+    color: #fefefe;
+    background: #0074D9;
+    border-radius: 3px;
+    padding: .5em 1em;
+    letter-spacing: .1em;
+    transition: all .5s;
+    -webkit-transition: all .4s;
+}
+
+.contact .button:hover {
+    box-shadow: 0px 0px 0px 2px white, 0px 0px 2px 4px #0074D9;
+}
+
+.icon {
+    max-height: 50px;
+}
+
+.contact-form {
+    padding-bottom: 50px;
+    font-family: 'Open Sans';
+    background-color: ;
+}
+
+.contact-form label {
+    min-width: 100px;
+}
+
+.contact-form input{
+    border-radius: 3px;
+}
+
+.contact-form textarea {
+    border-radius: 3px;
+    resize: none;
+}
+
+

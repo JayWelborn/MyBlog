@@ -5,7 +5,7 @@
 {% block jumbotron %}
 <div class="bg bg-about"></div>
 <div class="jumbotron vertical-center">
-    <div class="jumbotron-text">
+    <div class="jumbotron-about">
         <h1>{{ about.title }}</h1>
     </div>
 </div>
@@ -13,13 +13,11 @@
 
 {% block content %}
 <div class="about">
-
     <ul>
         <li>{{ about.name }}</li>
         <li>Company: {{ about.company }}</li>
         <li>Date Updated: {{ about.pub_date }}</li>
     </ul>
-
     <p class="bio">
         {{ about.bio|safe|linebreaks }}
     </p>

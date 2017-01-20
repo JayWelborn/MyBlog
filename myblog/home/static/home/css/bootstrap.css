@@ -4431,6 +4431,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-form .form-group:last-child {
     margin-bottom: 0;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {

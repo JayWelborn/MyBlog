@@ -5,6 +5,10 @@ html {
     min-height: 100%;
 }
 
+body {
+    margin: 0 0 75px: /* bottom footer height */
+}
+
 .bg {
     position: fixed;
     width: 100%;
@@ -50,35 +54,25 @@ html {
     padding: 10px;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: #1b1b1b;
-    background-image: -moz-linear-gradient(top, #222222, #111111);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-    background-image: -webkit-linear-gradient(top, #222222, #111111);
-    background-image: -o-linear-gradient(top, #222222, #111111);
-    background-image: linear-gradient(to bottom, #222222, #111111);
-    background-repeat: repeat-x;
-    border-color: #252525;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
-    padding: 10px;
-}
-.footer a{
-    color: #777;
-    text-decoration: none;
-}
-.footer a:hover{
-    color: #fff
-}
-
-#brand {
+.navbar-brand {
     padding: 8px;
 }
 
 .navbar-right {
     padding-right: 20px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 75%;
 }
 
 .center {
@@ -145,23 +139,35 @@ html {
 }
 
 .about ul {
-    font-size: 150%;
+    font-size: 120%;
     list-style-type: none;
-    text-align: center
 }
 
-.about ul li:last-child: {
-    padding-bottom: 10px;
+.about ul li {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 10px
 }
 
-.about li:first-child {
-    padding-bottom: 10px;
+.about ul li:last-child {
+    margin-bottom: 20px;
+}
+
+.prompt {
+    font-weight: bold;
+    display: inline-block;
+    width: 35%;
+}
+
+.fact {
+    font-size:
 }
 
 .bio{
-    text-indent: 40px;
+    text-align: center;
     padding-left: 20px;
     padding-top: 10px;
+    font-family: 'Arsenal', sans-serif;
+    font-size: 14px;
 }
 
 .update {
@@ -211,16 +217,19 @@ html {
 }
 
 .contact-form input[type=text], input[type=email], textarea {
-    border: none;
-    border-top: 1px solid #AAA;
-    border-right: 1px solid #AAA;
-    border-left: 1px solid #AAA;
-    border-bottom: 1px solid #AAA;
+    border: 1px solid #BBB;
     margin: 2px;
     padding: 2px 2px 2px 4px;
     border-radius: 5px;
     width: auto;
     max-width: 100%;
+}
+
+.contact-form
+input[type=text]:hover,
+input[type=email]:hover,
+textarea:hover {
+    background-color: #FFF8DE;
 }
 
 .contact-form input[type=text]:focus, input[type=email]:focus, textarea:focus{

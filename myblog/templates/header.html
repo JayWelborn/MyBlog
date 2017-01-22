@@ -7,16 +7,20 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
     <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static 'jw32x32.png' %}"/>
     <title>{% block title %}J Welborn{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'home:index' %}">
+                        <img alt="Jay Welborn" src="{% static 'jwbrand.png' %}"/>
+                </a>
                 <button type="button" class="navbar-toggle collapsed"
                         data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
                         aria-expanded="true">
@@ -29,11 +33,6 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a id="brand" href="{% url 'home:index' %}">
-                            <img alt="Jay Welborn" src="{% static 'jwbrand.png' %}"/>
-                        </a>
-                    </li>
                     <li><a href="{% url 'home:index' %}">Home</a></li>
                     <li><a href="{% url 'home:about' %}">About Me</a></li>
                     <li><a href="{% url 'home:contact' %}">Contact</a></li>
@@ -63,16 +62,9 @@
         {% endblock %}
     </div>
     <br/>
-    <footer class="footer nav navbar-inverse">
-        <div class="container-fluid">
-            <a href="{% url 'home:index' %}">Home</a>
-            &nbsp;
-            <a href="{% url 'home:about' %}">About</a>
-            &nbsp;
-            <a href="{% url 'home:contact' %}">Contact</a>
-            &nbsp;
-            <a href="{% url 'blog:index' %}">Blog</a>
-        </div>
+    <footer class="nav">
+        <hr>
+        &copy; Jay Welborn 2017
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>

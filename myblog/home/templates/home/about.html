@@ -10,14 +10,27 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <ul>
-                    <li>Name: {{ about.name }}</li>
+                    <li>
+                        <span class="prompt">
+                            Name:
+                        </span>
+                        <span class="fact">
+                            {{ about.name }}
+                        </span>
+                    </li>
                     {% for fact in fun_fact_list %}
-                        <li>{{ fact.prompt }}: {{ fact.fun_fact }}</li>
+                    <li>
+                        <span class="prompt">
+                            {{ fact.prompt }}:
+                        </span>
+                        <span class="fact">
+                            {{ fact.fun_fact }}
+                        </span>
+                    </li>
                     {% endfor %}
+
                 </ul>
-                <p class="bio">
                     {{ about.bio|safe|linebreaks }}
-                </p>
                 <hr>
                 <p class="update">
                     Date Updated: {{ about.pub_date }}

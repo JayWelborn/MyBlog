@@ -159,7 +159,8 @@ footer {
 }
 
 .fact {
-    font-size:
+    display: inline-block;
+    width: 65%;
 }
 
 .bio{

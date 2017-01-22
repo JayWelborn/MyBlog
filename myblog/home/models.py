@@ -14,12 +14,20 @@ class About(models.Model):
 
     title = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
-    company = models.CharField(max_length=30)
     bio = models.TextField()
     pub_date = models.DateField(default=timezone.now)
 
     def __str__(self):
         return self.title
+
+
+class FunFact(models.Model):
+
+    prompt = models.CharField(max_length=50)
+    fun_fact = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.prompt
 
 
 class Contact(models.Model):

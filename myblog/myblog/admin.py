@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from blog.models import Category, Entry
 from polls.models import Question, Choice
-from home.models import About, Contact
+from home.models import About, Contact, FunFact
 
 
 # Add blog categories
@@ -58,3 +58,4 @@ blog_admin.register(Entry, BlogAdmin)
 blog_admin.register(Question, QuestionAdmin)
 blog_admin.register(About)
 blog_admin.register(Contact)
+blog_admin.register(FunFact)

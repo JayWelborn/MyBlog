@@ -19,10 +19,6 @@ html {
     background: url('../../images/jumbotron-test.png') no-repeat center center;
 }
 
-.bg-about {
-    background: url('../../images/me.jpg') no-repeat center center;
-}
-
 .jumbotron {
     position: relative;
     height: 78vh;
@@ -39,11 +35,19 @@ html {
 }
 
 .jumbotron h1 {
-    font-size: 14vh;
+    font-size: 700%;
 }
 
 .jumbotron p {
-    font-size: 9vh;
+    font-size: 400%;
+}
+
+.jumbotron ul {
+    font-size: 250%;
+}
+
+.jumbotron li {
+    padding: 10px;
 }
 
 .footer {
@@ -137,6 +141,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .about ul {
@@ -145,9 +150,25 @@ html {
     text-align: center
 }
 
-.bio {
-    font-size: 120%;
+.about ul li:last-child: {
+    padding-bottom: 10px;
 }
+
+.about li:first-child {
+    padding-bottom: 10px;
+}
+
+.bio{
+    text-indent: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.update {
+    font-size: 70%;
+    text-align: center;
+}
+
 
 .contact {
     list-style-type: none;

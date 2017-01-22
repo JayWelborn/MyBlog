@@ -1,25 +1,29 @@
 {% extends 'header.html' %}
 {% load static %}
-
 {% block title %}{{ about.title }}{% endblock %}
-{% block jumbotron %}
-<div class="bg bg-about"></div>
-<div class="jumbotron">
-    <div class="jumbotron-about">
-        <h1>{{ about.title }}</h1>
-    </div>
-</div>
-{% endblock %}
 
 {% block content %}
-<div class="about">
-    <ul>
-        <li>{{ about.name }}</li>
-        <li>Company: {{ about.company }}</li>
-        <li>Date Updated: {{ about.pub_date }}</li>
-    </ul>
-    <p class="bio">
-        {{ about.bio|safe|linebreaks }}
-    </p>
+<div class="page-header center"><h1>{{ about.title }}</h1></div>
+<div class="container">
+    <img class="portrait" src="{% static 'images/me.jpg' %}"/>
+    <div class="about">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <ul>
+                    <li>Name: {{ about.name }}</li>
+                    {% for fact in fun_fact_list %}
+                        <li>{{ fact.prompt }}: {{ fact.fun_fact }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="bio">
+                    {{ about.bio|safe|linebreaks }}
+                </p>
+                <hr>
+                <p class="update">
+                    Date Updated: {{ about.pub_date }}
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

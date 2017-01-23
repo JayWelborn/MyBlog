@@ -18,6 +18,7 @@ class ContactForm(forms.Form):
         sender = self.email
         subject = self.subject
         message = self.message
+        name = self.name
 
         #if self.cc_myself:
             # TODO

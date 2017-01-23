@@ -11,6 +11,7 @@ from .models import Entry
 class IndexView(generic.ListView):
     template_name = 'blog/index.html'
     context_object_name = 'latest_blog_list'
+    paginate_by = 5
 
     def get_queryset(self):
         """

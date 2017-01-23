@@ -1,4 +1,9 @@
 {% extends 'header.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+{% endblock %}
 
 {% block content %}
     <div class="page-header"><h1>Latest Entries:</h1></div>
@@ -6,10 +11,29 @@
     {% if latest_blog_list %}
         <ol>
         {% for blog in latest_blog_list %}
-            <li><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></li>
+            <li>
+                <a href="{% url 'blog:detail' blog.id %}">{{ blog.title }} </a>
+                Published {{ blog.pub_date }}
+            </li>
         {% endfor %}
         </ol>
     {% else %}
         <p>No blog entries are available.</p>
+    {% endif %}
+
+    {% if is_paginated %}
+    <div class="pagination">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+            <a href="/blog/?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="page-current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+            <a href="/blog/?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
     {% endif %}
 {% endblock %}

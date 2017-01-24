@@ -37,14 +37,19 @@ class AboutView(ListView):
         return About.objects.latest('pub_date')
 
 
-class ContactView(ListView, FormView):
+class ContactView(FormView):
     template_name = 'home/contact.html'
-    context_object_name = 'contact'
     form_class = ContactForm
-    success_url = '/contact/'
+    success_url = '/contact'
 
-    def get_queryset(self):
-        return Contact.objects.latest('pub_date')
+    def get_context_data(self, **kwargs):
+        """
+        Get list of info from Contact Model to be passed to view
+        :return: latest contact information from db
+        """
+        context = super(ContactView, self).get_context_data(**kwargs)
+        context['contact'] = Contact.objects.latest('pub_date')
+        return context
 
     def form_valid(self, form):
         form.send_email()

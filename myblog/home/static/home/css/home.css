@@ -273,3 +273,7 @@ textarea:hover {
 	left: 3px;
 	color: #0044A9;
 }
+
+.alert .alert-danger {
+    text-align: center;
+}

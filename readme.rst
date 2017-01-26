@@ -5,8 +5,13 @@
 A project using Django 1.10.
 
 Dependencies:
-Python 3.5+
-Django 1.10+
+    Python 3.5+
+    Django 1.10+
+    MySQL
+    mysql-server
+    python3-dev
+    mysql-devel
+    mysqlclient
 
 Follows Best Practices
 

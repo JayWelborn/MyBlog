@@ -9,4 +9,5 @@ h1 {
 
 body {
     background: white url("images/background.jpg") no-repeat right bottom;
+    margin-top: 75px;
 }

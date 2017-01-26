@@ -3,7 +3,7 @@
 {% block title%}Polls{% endblock %}
 {% block content %}
     <div class="page-header">
-        <h1>{{ question.question_text }}</h1>
+        {{ question.question_text }}
     </div>
     <ol>
         {% for choice in question.choice_set.all %}

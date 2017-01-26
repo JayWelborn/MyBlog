@@ -2,7 +2,7 @@
 
 {% block title%}Polls{% endblock %}
 {% block content %}
-    <h1 class="page-header">{{ question.question_text }}</h1>
+    <div class="page-header">{{ question.question_text }}</div>
     {% if error_message %}<p><strong>{{ error_message }}</strong></p> {% endif %}
 
     <form action="{% url 'polls:vote' question.id %}" method="post">

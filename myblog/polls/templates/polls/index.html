@@ -1,5 +1,8 @@
 {% extends 'header.html' %}
-
+{% load static %}
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/polls.css' %}"/>
+{% endblock %}
 {% block title %}Polls{% endblock %}
 {% block content %}
     <div class="page-header center"><h1>Questions:</h1></div>

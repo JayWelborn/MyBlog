@@ -28,3 +28,6 @@ ENV/
 
 # local DB
 myblog.sqlite3
+
+# blog entry test
+new-entry.html

@@ -9,6 +9,10 @@ body {
     margin: 0 0 50px; /* bottom footer height */
 }
 
+.navbar {
+    background: rgba(245,235,255,.85);
+}
+
 .bg {
     position: fixed;
     width: 100%;

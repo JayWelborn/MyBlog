@@ -1,10 +1,14 @@
 {% extends 'header.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+{% endblock %}
 
 {% block content %}
     <div class="page-header center"><h1>{{ entry.title }}</h1></div>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p> {% endif %}
-
-    <div>
-        <p>{{ entry.body|safe|linebreaks }}</p>
-    </div>
+    {% if error_message %}
+        <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+    <p class="blog-entry">{{ entry.body|safe }}</p>
 {% endblock %}

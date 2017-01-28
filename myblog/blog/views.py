@@ -32,3 +32,10 @@ class DetailView(generic.DetailView):
         Return last 5 blog entries
         """
         return Entry.objects.distinct()
+
+
+class TestView(generic.ListView):
+    template_name = 'blog/new-entry.html'
+
+    def get_queryset(self):
+        return []

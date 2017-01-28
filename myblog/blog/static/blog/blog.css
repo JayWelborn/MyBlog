@@ -15,7 +15,7 @@
 }
 
 .blog-list li:hover {
-    background: rgba(100,100,255,.1);
+    background: rgba(245,235,255,.85);
 }
 
 .blog-list li:last-child {

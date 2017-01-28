@@ -48,6 +48,17 @@
     color: #505160;
 }
 
+.blog-entry a {
+    text-decoration: none;
+    color: #68829e;
+    font-weight: 600;
+}
+
+.blog-entry a:hover {
+    text-decoration: none;
+    color: #505160;
+}
+
 .pagination {
     width: 100%;
     text-align: center;

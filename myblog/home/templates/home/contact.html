@@ -5,49 +5,57 @@
 
 {% block content %}
 
-    <div class="page-header center"><h1>{{ contact.title }}</h1></div>
-    {% if form.errors %}
-        {% for field in form %}
-            {% for error in field.errors %}
-                <div class="alert alert-danger">
-                    <strong>{{ error|escape }}</strong>
-                </div>
-            {% endfor %}
-        {% endfor %}
-        {% for error in form.non_field_errors %}
+<div class="page-header center"><h1>{{ contact.title }}</h1></div>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
             <div class="alert alert-danger">
                 <strong>{{ error|escape }}</strong>
             </div>
         {% endfor %}
-    {% endif %}
-    <div class="container">
-    <img class="portrait" src="{% static 'images/london-7.jpg' %}"/>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container">
+<img class="portrait" src="{% static 'images/london-7.jpg' %}"/>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <ul class="contact">
+                <li>
+                    <a href="{{ contact.facebook }}">
+                        <img class="icon" src="{% static 'images/facebook-icon.png' %}"/>
+                    </a>
+                    <a class="button" href="{{ contact.facebook }}">Facebook</a>
+                </li>
+                <li>
+                    <a href="{{ contact.github }}">
+                        <img class="icon" src="{% static 'images/github-icon.png' %}"/>
+                    </a>
+                    <a class="button" href="{{ contact.github }}">Github</a>
+                </li>
+            </ul>
+            <hr>
+            <form action="" method="post" class="contact-form">
+                {% csrf_token %}
                 <ul class="contact">
-                    <li>
-                        <a href="{{ contact.facebook }}">
-                            <img class="icon" src="{% static 'images/facebook-icon.png' %}"/>
-                        </a>
-                        <a class="button" href="{{ contact.facebook }}">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="{{ contact.github }}">
-                            <img class="icon" src="{% static 'images/github-icon.png' %}"
-                        </a>
-                        <a class="button" href="{{ contact.github }}">Github</a>
-                    </li>
+                    {{ form.as_ul }}
+                    <li><input type="submit" value="Email Me!"></li>
                 </ul>
-                <hr>
-                <form action="" method="post" class="contact-form">
-                    {% csrf_token %}
-                    <ul class="contact">
-                        {{ form.as_ul }}
-                        <li><input type="submit" value="Email Me!"></li>
-                    </ul>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
+</div>
 
 {% endblock %}

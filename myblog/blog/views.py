@@ -34,8 +34,5 @@ class DetailView(generic.DetailView):
         return Entry.objects.distinct()
 
 
-class TestView(generic.ListView):
+class TestView(generic.TemplateView):
     template_name = 'blog/new-entry.html'
-
-    def get_queryset(self):
-        return []

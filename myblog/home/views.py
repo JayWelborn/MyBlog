@@ -2,8 +2,8 @@
 import random
 
 # Django imports
-from django.shortcuts import render
 from django.views.generic import ListView, FormView
+from django.contrib import messages
 
 # Relative imports
 from .models import About, Contact, FunFact
@@ -40,7 +40,8 @@ class AboutView(ListView):
 class ContactView(FormView):
     template_name = 'home/contact.html'
     form_class = ContactForm
-    success_url = '/contact'
+    success_url = '/contact/'
+    success_msg = 'Thanks for the Email!'
 
     def get_context_data(self, **kwargs):
         """
@@ -52,5 +53,12 @@ class ContactView(FormView):
         return context
 
     def form_valid(self, form):
+        """
+        Sends email and displays success message when a valid form
+        is submitted.
+        :param form: from .forms.py
+        :return: instance of ContactView with success_msg attribute accessible for the view.
+        """
         form.send_email()
+        messages.info(self.request, self.success_msg)
         return super(ContactView, self).form_valid(form)

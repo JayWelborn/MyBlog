@@ -21,25 +21,19 @@ class ContactForm(forms.Form):
         :return: none
         """
 
-        # validates form and cleans data
-        if forms.Form.is_valid(self):
+        # instantiates EmailMessage class with data from form
+        contact_email = EmailMessage(subject=self.cleaned_data['subject'],
+                                     to=['jesse.welborn@gmail.com'],
+                                     body='Sender Name: {} \nSender Email: {}\n\n {}'.format(
+                                         self.cleaned_data['name'],
+                                         self.cleaned_data['email'],
+                                         self.cleaned_data['message']
+                                     ))
 
-            # instantiates EmailMessage class with data from form
-            contact_email = EmailMessage(subject=self.cleaned_data['subject'],
-                                         to=['jesse.welborn@gmail.com'],
-                                         body='Sender Name: {} \nSender Email: {}\n\n {}'.format(
-                                             self.cleaned_data['name'],
-                                             self.cleaned_data['email'],
-                                             self.cleaned_data['message']
-                                         ))
+        # adds cc line if applicable
+        cc_myself = self.cleaned_data['cc_myself']
+        if cc_myself:
+            contact_email.cc = [self.cleaned_data['email']]
 
-            # adds cc line if applicable
-            cc_myself = self.cleaned_data['cc_myself']
-            if cc_myself:
-                contact_email.cc = [self.cleaned_data['email']]
-
-            # send email
-            contact_email.send()
-
-        else:
-            print("fail")
+        # send email
+        contact_email.send()

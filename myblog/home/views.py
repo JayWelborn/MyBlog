@@ -3,7 +3,7 @@ import random
 
 # Django imports
 from django.views.generic import ListView, FormView
-from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Relative imports
 from .models import About, Contact, FunFact
@@ -37,11 +37,11 @@ class AboutView(ListView):
         return About.objects.latest('pub_date')
 
 
-class ContactView(FormView):
+class ContactView(SuccessMessageMixin, FormView):
     template_name = 'home/contact.html'
     form_class = ContactForm
     success_url = '/contact/'
-    success_msg = 'Thanks for the Email!'
+    success_message = 'Thanks for the Email!'
 
     def get_context_data(self, **kwargs):
         """
@@ -60,5 +60,4 @@ class ContactView(FormView):
         :return: instance of ContactView with success_msg attribute accessible for the view.
         """
         form.send_email()
-        messages.info(self.request, self.success_msg)
         return super(ContactView, self).form_valid(form)

@@ -6,9 +6,11 @@
 {% endblock %}
 
 {% block content %}
+<div class="blog">
     <div class="page-header center"><h1>{{ entry.title }}</h1></div>
     {% if error_message %}
         <p><strong>{{ error_message }}</strong></p>
     {% endif %}
-    <p class="blog-entry">{{ entry.body|safe }}</p>
+    <span class="blog-date">{{ entry.pub_date.date }}</span><p class="blog-entry">{{ entry.body|safe }}</p>
+</div>
 {% endblock %}

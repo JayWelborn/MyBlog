@@ -7,7 +7,7 @@
 
 {% block content %}
     <div class="page-header center"><h1>Latest Entries:</h1></div>
-
+    <div class="blog">
     {% if latest_blog_list %}
         <ul class="blog-list">
         {% for blog in latest_blog_list %}
@@ -40,4 +40,5 @@
         </span>
     </div>
     {% endif %}
+    </div>
 {% endblock %}

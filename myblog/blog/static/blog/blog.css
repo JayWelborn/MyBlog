@@ -1,21 +1,30 @@
-.blog-list {
+.blog {
     margin-left: auto;
     margin-right: auto;
     max-width: 760px;
+}
+
+.blog-list {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     list-style-type: none;
 }
 
 .blog-list li {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #D6D6D6;
     padding-bottom: 5px;
     padding-top: 10px;
     padding-left: 20px;
     padding-right; 20px;
     border-radius: 8px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    transition-timing-function: ease-out;
 }
 
 .blog-list li:hover {
-    background: rgba(245,235,255,.85);
+    background: rgba(240,240,255,1);
 }
 
 .blog-list li:last-child {
@@ -29,12 +38,18 @@
     width: 15%;
 }
 
-.blog-list .blog-date {
+.blog-date {
     padding-right: 20px;
     display: inline-block;
-    color: #777;
-    font-size: 85%;
+    color: #888;
+    font-size: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-list .blog-date {
     float: right;
+    font-size: 85%;
 }
 
 .blog-list a {
@@ -69,10 +84,10 @@
 
 .blog-body {
     text-align: left;
-    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
+    width: 100%
 }
 
 .blog-image {

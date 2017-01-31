@@ -22,6 +22,7 @@ migrations
 .venv/
 venv/
 ENV/
+myblogenv/
 
 # IDE stuff
 .idea

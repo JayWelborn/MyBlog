@@ -59,6 +59,7 @@
 .blog-list .blog-date {
     float: right;
     font-size: 85%;
+    padding-right: 20px
 }
 
 .blog-list a {

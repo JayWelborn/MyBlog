@@ -32,3 +32,6 @@ myblog.sqlite3
 
 # blog entry test
 new-entry.html
+
+# local static directory
+myblog/static/

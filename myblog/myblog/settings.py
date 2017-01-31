@@ -30,7 +30,7 @@ ALLOWED_HOSTS = [
     '192.168.2.113',
     'localhost',
     '127.0.0.1',
-    'jaywelborn.pythonanywhere.com'
+    'jaywelborn.pythonanywhere.com',
 ]
 
 # Application definition

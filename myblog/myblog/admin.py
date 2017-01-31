@@ -10,9 +10,22 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
+class CategoryInline(admin.TabularInline):
+    model = Category
+    extra = 2
+
+
 # Add blog entries
 class BlogAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Title', {'fields': ['title', 'slug']}),
+        ('Publication Date', {'fields': ['pub_date']}),
+        ('Header', {'fields': ['header_image']}),
+        ('Entry', {'fields': ['body', 'category']}),
+    ]
     prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title', 'pub_date')
+    list_filter = ['pub_date']
 
 
 # add about me page
@@ -49,7 +62,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 # Customizes header on admin site
 class MyAdminSite(admin.AdminSite):
-    site_header = 'JDevelops Administration'
+    site_header = 'Jay Welborn Administration'
 
 
 blog_admin = MyAdminSite(name='admin')

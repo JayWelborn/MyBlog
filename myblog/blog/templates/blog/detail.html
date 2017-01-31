@@ -3,14 +3,42 @@
 
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+    {% if entry.header_image %}
+    <style type="text/css">
+        .bg-blog-detail {
+            background: url('{{ entry.header_image.url }}') no-repeat center center;
+        }
+    </style>
+    {% endif %}
 {% endblock %}
+
+
+{% block jumbotron %}
+{% if entry.header_image %}
+        <div class="bg bg-blog-detail"></div>
+        <div class="jumbotron vertical-center">
+            <div class="jumbotron-text">
+                <h1>{{ entry.title }}</h1>
+                <p></p>
+            </div>
+        </div>
+{% endif %}
+{% endblock %}
+
 
 {% block content %}
 <div class="blog">
+    {% if not entry.header_image %}
     <div class="page-header center"><h1>{{ entry.title }}</h1></div>
+    {% endif %}
     {% if error_message %}
         <p><strong>{{ error_message }}</strong></p>
     {% endif %}
-    <span class="blog-date">{{ entry.pub_date.date }}</span><p class="blog-entry">{{ entry.body|safe }}</p>
+    <img class="blog-profile-picture" src="{% static 'images/blog-profile.jpg' %}"/>
+    <div class="publication-info">
+        Published on: <br/>
+        <div class="blog-date">{{ entry.pub_date.date }}</div>
+    </div>
+    <p class="blog-entry">{{ entry.body|safe }}</p>
 </div>
 {% endblock %}

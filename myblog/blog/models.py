@@ -14,7 +14,8 @@ class Entry(models.Model):
 
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    pub_date = models.DateTimeField('date published', default=datetime.now())
+    header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
+    pub_date = models.DateTimeField('date published', default=datetime.now)
     body = models.TextField()
     category = models.ManyToManyField('blog.Category')
 

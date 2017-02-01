@@ -33,3 +33,6 @@ myblog.sqlite3
 # blog entry test
 new-entry.html
 new-entry.css
+
+# local media files
+/myblog/myblog/media/

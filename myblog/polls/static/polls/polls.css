@@ -1,9 +1,14 @@
-a {
-    color: green;
+li a {
     text-decoration: none;
+    color: #68829e;
+    font-weight: 600;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
 }
 
 a:hover {
-    color: green;
     text-decoration: none;
+    color: #aebd38;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
 }

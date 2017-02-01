@@ -3,6 +3,7 @@
 
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
     {% if entry.header_image %}
     <style type="text/css">
         .bg-blog-detail {
@@ -39,6 +40,6 @@
         Published on: <br/>
         <div class="blog-date">{{ entry.pub_date.date }}</div>
     </div>
-    <p class="blog-entry">{{ entry.body|safe }}</p>
+    <div class="blog-entry">{{ entry.body|safe }}</div>
 </div>
 {% endblock %}

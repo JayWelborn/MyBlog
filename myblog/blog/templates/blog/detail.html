@@ -4,7 +4,7 @@
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
-    <meta property="og:url" content="{% url 'blog:detail' entry.id %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id %}" />
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
     <!-- TODO: Add description to model Blog and replace this with each blog's description -->

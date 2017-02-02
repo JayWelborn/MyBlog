@@ -6,6 +6,7 @@
     <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'home:about' %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About me"/>
+    <meta property="og:description" content="{{ about.bio }}"/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
 {% endblock %}
 

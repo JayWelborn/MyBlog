@@ -5,6 +5,7 @@
     <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'polls:detail' question.id %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ question.question_text }}"/>
+    <meta property="og:description" content="{{question.choice_set.all}}"/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
 {% endblock %}
 

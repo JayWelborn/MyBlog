@@ -2,7 +2,7 @@
 {% load static %}
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/polls.css' %}"/>
-    <meta property="og:url" content="{% url 'polls:detail' %}" />
+    <meta property="og:url" content="{% url 'polls:detail' question.id %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ question.question_text }}"/>
     <meta property="og:image" content="{% static 'images/me.jpg' %}"/>

@@ -2,6 +2,13 @@
 {% load static %}
 {% block title %}{{ about.title }}{% endblock %}
 
+{% block header %}
+    <meta property="og:url" content="{% url 'home:about' %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About me"/>
+    <meta property="og:image" content="{% static 'images/blog-profile.jpg' %}"/>
+{% endblock %}
+
 {% block content %}
 <div class="page-header center"><h1>{{ about.title }}</h1></div>
 <div class="container">

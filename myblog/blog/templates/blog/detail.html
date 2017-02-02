@@ -4,12 +4,20 @@
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
+    <meta property="og:url" content="{% url 'blog:detail' blog.id %}" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="{{ entry.title }}" />
+    <!-- TODO: Add description to model Blog and replace this with each blog's description -->
+    <meta property="og:description" content="{{ entry.title }}" />
     {% if entry.header_image %}
+    <meta property="og:image" content="{{ entry.header_image.url }}" />
     <style type="text/css">
         .bg-blog-detail {
             background: url('{{ entry.header_image.url }}') no-repeat center center;
         }
     </style>
+    {% else %}
+    <meta property="og:image" content="{% static 'images/blog-profile.jpg' %}"/>
     {% endif %}
 {% endblock %}
 

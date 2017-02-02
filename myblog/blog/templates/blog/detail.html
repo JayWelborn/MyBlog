@@ -8,9 +8,9 @@
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
     <!-- TODO: Add description to model Blog and replace this with each blog's description -->
-    <meta property="og:description" content="{{ entry.body|safe }}" />
+    <meta property="og:description" content="{{ entry.body|striptags }}"/>
     {% if entry.header_image %}
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}" />
+        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}"/>
         <style type="text/css">
             .bg-blog-detail {
                 background: url('{{ entry.header_image.url }}') no-repeat center center;

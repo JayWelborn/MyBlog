@@ -3,10 +3,10 @@
 
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
-    <meta property="og:url" content="{% url 'blog:index' %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:index' %}" />
     <meta property="og:type" content="blog"/>
     <meta property="og:title" content="Jay's Blog"/>
-    <meta property="og:image" content="{% static 'images/blog-profile.jpg' %}"/>
+    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
 {% endblock %}
 
 {% block content %}

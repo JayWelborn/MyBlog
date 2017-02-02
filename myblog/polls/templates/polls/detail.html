@@ -2,10 +2,10 @@
 {% load static %}
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/polls.css' %}"/>
-    <meta property="og:url" content="{% url 'polls:detail' question.id %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'polls:detail' question.id %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ question.question_text }}"/>
-    <meta property="og:image" content="{% static 'images/me.jpg' %}"/>
+    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
 {% endblock %}
 
 {% block title%}Polls{% endblock %}

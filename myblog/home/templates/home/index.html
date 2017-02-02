@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block header %}
-    <meta property="og:url" content="{% url 'home:index' %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'home:index' %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Welcome to My Website!"/>
-    <meta property="og:image" content="{% static 'images/me.jpg' %}"/>
+    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
 {% endblock %}
 
 {% block jumbotron %}

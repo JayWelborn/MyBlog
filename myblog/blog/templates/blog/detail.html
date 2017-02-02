@@ -8,7 +8,7 @@
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
     <!-- TODO: Add description to model Blog and replace this with each blog's description -->
-    <meta property="og:description" content="{{ entry.title }}" />
+    <meta property="og:description" content="{{ entry.body|safe }}" />
     {% if entry.header_image %}
         <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}" />
         <style type="text/css">

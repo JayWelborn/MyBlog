@@ -4,7 +4,7 @@
 
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/polls.css' %}"/>
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'polls:results' question.id %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'polls:results' %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Results"/>
     <meta property="og:description" content="Here are the results of this polll so far."/>

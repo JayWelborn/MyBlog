@@ -11,6 +11,10 @@ body {
     opacity: .94;
 }
 
+.brand-image {
+    max-height: 44px;
+}
+
 .bg {
     position: fixed;
     width: 100%;

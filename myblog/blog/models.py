@@ -18,7 +18,7 @@ class Entry(models.Model):
     header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
     pub_date = models.DateTimeField('date published', default=datetime.now)
     body = models.TextField()
-    tags = models.ManyToManyField('Tag', related_name='entries')
+    tags = models.ManyToManyField('Tag', related_name='entries', blank=True)
 
     def __str__(self):
         return self.title

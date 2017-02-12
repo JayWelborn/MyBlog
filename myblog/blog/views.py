@@ -3,10 +3,9 @@ from django.views import generic
 from django.utils import timezone
 
 # Relative imports
-from .models import Entry, Category
+from .models import Entry, Tag
 
 
-# TODO add categories to indexview and detailview to be passed to templates
 # Create your views here.
 class IndexView(generic.ListView):
     template_name = 'blog/index.html'
@@ -16,17 +15,16 @@ class IndexView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         """
-        Get list of categories
-        :return: Categories
+        Get list of tags
+        :return: tags
         """
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['categories'] = Category.objects.distinct()
+        context['tags'] = Tag.objects.distinct()
         return context
 
     def get_queryset(self):
         """
         Return blog entries sorted by date
-        Return
         """
         entries = Entry.objects.distinct()
         return entries.filter(
@@ -35,14 +33,31 @@ class IndexView(generic.ListView):
 
 
 class DetailView(generic.DetailView):
+    """
+    View single blog entry
+    """
     model = Entry
     template_name = 'blog/detail.html'
 
-    def get_queryset(self):
-        """
 
-        """
-        return Entry.objects.distinct()
+class TagListView(generic.ListView):
+    """
+    View all entries assiciated with a certain tag
+    """
+    model = Tag
+    template_name = 'blog/tag_list.html'
+    context_object_name = 'tag_list'
+    paginate_by = 5
+    paginate_orphans = 2
+
+    def get_queryset(self):
+        return Tag.objects.distinct()
+
+
+class TagDetailView(generic.DetailView):
+    model = Tag
+    template_name = 'blog/tag_detail.html'
+    context_object_name = 'tag'
 
 
 class TestView(generic.TemplateView):

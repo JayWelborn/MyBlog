@@ -1,17 +1,17 @@
 from django.contrib import admin
 
-from blog.models import Category, Entry
+from blog.models import Tag, Entry
 from polls.models import Question, Choice
 from home.models import About, Contact, FunFact
 
 
 # Add blog categories
-class CategoryAdmin(admin.ModelAdmin):
+class TagAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-class CategoryInline(admin.TabularInline):
-    model = Category
+class TagInline(admin.TabularInline):
+    model = Tag
     extra = 2
 
 
@@ -66,7 +66,7 @@ class MyAdminSite(admin.AdminSite):
 
 
 blog_admin = MyAdminSite(name='admin')
-blog_admin.register(Category, CategoryAdmin)
+blog_admin.register(Tag, TagAdmin)
 blog_admin.register(Entry, BlogAdmin)
 blog_admin.register(Question, QuestionAdmin)
 blog_admin.register(About)

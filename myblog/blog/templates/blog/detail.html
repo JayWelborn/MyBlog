@@ -4,7 +4,7 @@
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id %}" />
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id entry.slug%}" />
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
     <!-- TODO: Add description to model Blog and replace this with each blog's description -->
@@ -50,4 +50,18 @@
     </div>
     <div class="blog-entry">{{ entry.body|safe }}</div>
 </div>
+
+{% if entry.tags %}
+<div class="tags">
+    Tags:
+    {% for tag in entry.tags.all %}
+    <a href="{% url 'blog:tag_detail' tag.id tag.slug %}" class="tag-detail-link">
+        <span class="tag">
+            {{ tag.title }}
+        </span>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
 {% endblock %}

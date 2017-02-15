@@ -1,15 +1,3 @@
-@media (max-width: 600px) {
-    .jumbotron-text {
-        font-size: 60%;
-    }
-}
-
-@media (max-height: 640px) {
-    .jumbotron-text {
-        font-size: 60%;
-    }
-}
-
 .blog h3 {
     font-family: 'Oswald';
     text-align: center;

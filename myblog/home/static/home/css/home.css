@@ -33,7 +33,6 @@ body {
     position: relative;
     height: 78vh;
     min-width: 100%;
-    min-width: 100%;
     max-height: 1080px;
     color: #FFFFFF;
     background:transparent;
@@ -51,6 +50,39 @@ body {
 
 .jumbotron p {
     font-size: 400%;
+}
+
+.page-header {
+    padding-top: 1.5%;
+    font-family: 'Oswald';
+}
+
+.page-header h1 {
+    font-size: 500%;
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
 }
 
 .jumbotron ul {
@@ -110,15 +142,6 @@ footer {
     font-size: 120%;
     padding: 30px;
     font-family: 'Open Sans', sans-serif;
-}
-
-.page-header {
-    padding-top: 1.5%;
-    font-family: 'Oswald';
-}
-
-.page-header h1 {
-    font-size: 500%;
 }
 
 .portrait {

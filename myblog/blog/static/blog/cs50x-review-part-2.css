@@ -1,0 +1,49 @@
+.blog ul {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 69%;
+    overflow: auto;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog li {
+    display: inline-block;
+    font-family: arsenal;
+    width: auto;
+    float: left;
+    margin-right: 0px;
+    padding: 0 20px;
+}
+
+.blog li:last-child {
+  border-right: none;
+}
+
+.warning {
+    font-family: 'Oswald';
+    text-align: center;
+    margin: 25px;
+    color: red;
+    animation: blinker 1.5s linear infinite;
+    letter-spacing: 2px;
+}
+
+@keyframes blinker {
+    50% { opacity: .7; }
+}
+
+.safe-zone {
+    font-family: 'Oswald';
+    text-align: center;
+    margin: 20px;
+    color: green;
+    animation: blinker 1.5s linear infinite;
+    letter-spacing: 2px;
+}
+
+.blog pre {
+    margin: 25px;
+    padding: 10px;
+}

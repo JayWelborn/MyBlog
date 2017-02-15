@@ -10,24 +10,12 @@
     font-size: 420% ;
 }
 
-@media (max-width: 600px) {
-    .page-header h1 {
-        font-size: 300%;
-    }
-}
-
-@media (max-height: 640px) {
-    .page-header h1 {
-        font-size: 300%;
-    }
-}
-
 .blog {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
     padding: 20px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .blog-list {
@@ -131,6 +119,10 @@
     max-height: 150px;
 }
 
+.right {
+    float: right;
+}
+
 .left {
     float: left;
 }
@@ -184,4 +176,30 @@ p {
 .tag-detail-link:hover {
     text-decoration: none;
     color: #fb6542;
+}
+
+.blog h3 {
+    font-family: 'Oswald';
+    text-align: center;
+    padding-top: 5px;
+    letter-spacing: 2px;
+}
+
+.confession {
+    font-style: italic;
+    font-size: 90%;
+    color: #555
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 4px;
+    font-size: 95%;
+}
+
+hr {
+    width: 60%;
+    margin-top: 2px
 }

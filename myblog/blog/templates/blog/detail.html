@@ -4,19 +4,27 @@
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
+    <!-- Facebook og properties -->
     <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id entry.slug%}" />
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
-    <!-- TODO: Add description to model Blog and replace this with each blog's description -->
     <meta property="og:description" content="{{ entry.body|striptags }}"/>
+    <!-- End og properties -->
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@__JayWelborn__" />
+    <meta name="twitter:title" content="{{ entry.title }}" />
+    <meta name="twitter:description" content="{{ entry.body|striptags }}" />
     {% if entry.header_image %}
         <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}"/>
+        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}" />
         <style type="text/css">
             .bg-blog-detail {
                 background: url('{{ entry.header_image.url }}') no-repeat center center;
             }
         </style>
     {% else %}
+        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
         <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
     {% endif %}
 {% endblock %}

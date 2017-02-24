@@ -10,6 +10,30 @@
     font-size: 420% ;
 }
 
+@media screen and (max-width: 600px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
+}
+
 .blog {
     margin-left: auto;
     margin-right: auto;
@@ -134,7 +158,7 @@
 
 p {
     font-family: 'Arsenal';
-    margin: 10px;
+    margin: 15px;
 }
 
 .tags {
@@ -181,8 +205,8 @@ p {
 .blog h3 {
     font-family: 'Oswald';
     text-align: center;
-    padding-top: 5px;
     letter-spacing: 2px;
+    padding-top: 10px;
 }
 
 .confession {
@@ -201,5 +225,6 @@ p {
 
 hr {
     width: 60%;
-    margin-top: 2px
+    border-color: #bbb;
+    padding: 10px;
 }

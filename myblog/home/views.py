@@ -2,7 +2,7 @@
 import random
 
 # Django imports
-from django.views.generic import ListView, FormView
+from django.views.generic import TemplateView, ListView, FormView
 from django.contrib.messages.views import SuccessMessageMixin
 
 # Relative imports
@@ -11,11 +11,8 @@ from .forms import ContactForm
 
 
 # Create your views here.
-class IndexView(ListView):
+class IndexView(TemplateView):
     template_name = 'home/index.html'
-
-    def get_queryset(self):
-        return []
 
 
 class AboutView(ListView):

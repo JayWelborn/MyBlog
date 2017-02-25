@@ -73,7 +73,7 @@ body {
     }
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 600px) {
     .jumbotron h1 {
         font-size: 400%;
     }

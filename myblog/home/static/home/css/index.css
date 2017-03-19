@@ -1,0 +1,6 @@
+#background-check {
+    width: 100%;
+    height: calc(78vh -  50px);
+    background-color: red;
+    margin-top: 0px;
+}

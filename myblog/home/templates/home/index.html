@@ -4,151 +4,93 @@
 {% block header %}
     <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'home:index' %}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Welcome to My Website!"/>
-    <meta property="og:description" content="Thanks for stopping by my website. Please read some blog or answer
-    some polls or something"/>
+    <meta property="og:title" content="Fresh Start Web Development"/>
+    <meta property="og:description" content="Welcome to Fresh Start Web Development, where responsive
+                                             design meets smart engineering."/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/index.css' %}"/>
 {% endblock %}
 
 {% block jumbotron %}
     <div class="bg bg-index"></div>
-    <div class="jumbotron vertical-center">
-        <div class="jumbotron-text">
-            <h1>Hello, World!</h1>
-            <p>My name is Jay</p>
+    <div class="jumbotron">
+        <div class="jumbotron-home">
+            <h1>{{ brand.title }}</h1>
+            <hr>
+            <p>{{ brand.sub_header }}</p>
+            <a href="{% url 'home:about'%}">Learn More</a>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid center">
-        <h1 class="center"><strong>I made this website for fun.</strong></h1>
-        <h3 class="center">
-            It wouldn't have been possible without the following
-            open source technologies:
-        </h3>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </div>
-    <div class="container center">
-        <div class="row centered">
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https://www.python.org">
-                    <img class="logo" src="{% static 'images/python-logo.png' %}"/>
-                </a>
-                <p class="blurb">
-                    Python is an open-source programming language.
-                    The syntax is super-readable and code that's "pythonic"
-                    actually seems to take on a certain beauty. If you're
-                    thinking about learning programming, I think python
-                    is a great first language.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https://www.djangoproject.com">
-                    <img class="logo" src="{% static 'images/django-logo-negative.png' %}"/>
-                </a>
-                <p class="blurb">
-                    Django is an open-source web framework for Python.
-                    Django provides a ton of amazing tools for interacting
-                    with databases, writing logic into your website, and
-                    dynamically rendering HTML to send to a browser. I've
-                    only scratched the surface so far, but I look forward
-                    to learning more as I add features to the site.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https://www.jetbrains.com/pycharm/">
-                    <img class="logo" src="{% static 'images/pycharm-logo.png' %}"/>
-                </a>
-                <p class="blurb">
-                    Pycharm is a fantastic IDE for Python. The folks
-                    at JetBrains make the Community Edition available
-                    for free. Pycharm makes it easy to write, style,
-                    and refactor code so it's readable and consistent.
-                </p>
-            </div>
+<section id="python-django" class="index-container">
+    <div class="index-content">
+        <div class="logo-container">
+            <a href="//www.python.org">
+                <img class="index-logo" alt="Python" title="Python"
+                     src="{% static 'images/python-logo.png' %}"/>
+            </a>
+            <a href="www.djangoproject.com">
+                <img class="index-logo" alt="Django" title="Django"
+                     src="{% static 'images/django-logo-negative.png' %}"/>
+            </a>
         </div>
-        <div class="row centered">
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="http://www.w3schools.com/html/">
-                    <img class="logo" src="{% static 'images/HTML5-logo.png' %}"/>
-                </a>
-                <p class="blurb">
-                    HTML (HyperText Markup Language) is the language
-                    browsers interpret to organize what you see.
-                    HTML5 offers a bunch of new features making it
-                    easier to read, write, and organize the language
-                    that makes the internet possible.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <img class="logo" src="{% static 'images/JS.png' %}"/>
-                <p class="blurb">
-                    JavaScript is a programming language that runs
-                    inside the user's web browsers. It allows for elements to
-                    be dynamically edited on the fly.
-                    I have barely used any of it, but what I have used adds
-                    a nice touch and makes the site a little more responsive.
-                    I'm definitely going to try and incorporate JavaScript more
-                    as the site grows.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="http://www.w3schools.com/css/">
-                    <img class="logo" src="{% static 'images/css-logo.png' %}"/>
-                </a>
-                <p class="blurb">
-                    CSS (Cascading StyleSheets) is the language
-                    used to tell browsers how things delivered via
-                    HTML should look. Everything from font size
-                    to image locations and element re-shaping
-                    based on window size happens in CSS. This
-                    is a deep rabbit hole, and I'm just getting started.
-                </p>
-            </div>
-        </div>
-        <div class="row justify-content-center centered">
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https:/getfedora.org/en/">
-                    <img class="logo" src="{% static 'images/fedora-logo.png' %}"/>
-                </a>
-                <p class="blurb">
-                    Fedora is a popular distribution of the Linux
-                    operating system. I chose Linux because of the
-                    freedom it gives me to customize my environment,
-                    and I chose Fedora in particular sort of at random.
-                    I haven't been disappointed.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https://github.com">
-                    <img class="logo" src="{% static 'images/github-octocat.png' %}"/>
-                </a>
-                <p class="blurb">
-                    GitHub is <strong>THE</strong> place to create remote
-                    code repositories using Git. Keeping a remote backup
-                    of the code that runs any hobby project I've been
-                    working on has allowed me to tinker even when I'm
-                    not on my machine. It's also amazing to see what other
-                    people are up to in the open-source world. There are
-                    some truly amazing projects out there.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4 col">
-                <a href="https://www.getbootstrap.com">
-                    <img class="logo" src="{% static 'images/Bootstrap_logo.svg.png' %}"/>
-                </a>
-                <p class="blurb">
-                    Bootstrap is a free HTML/CSS/Javascript framework
-                    that helps design websites that are responsive and
-                    good looking. By using a mobile-first focus, Bootstrap
-                    makes it easy to ensure your website looks exactly how
-                    you want on even the smallest screens.
-                </p>
-            </div>
+        <div class="text-container">
+            <h1>Python &amp; Django</h1>
+            <hr>
+            <p>
+                The Django framework allows me to develop scalable, maintainable Python web applications
+                quickly.
+            </p>
         </div>
     </div>
+</section>
+<section id="html-css-javascript" class="index-container">
+    <div class="index-content">
+        <div class="text-container">
+            <h1>HTML, CSS, &amp; Javascript</h1>
+            <hr>
+            <p>
+                HTML, CSS, and Javascript let me give your content the presentation it deserves.
+            </p>
+        </div>
+        <div class="logo-container">
+            <a href="//www.w3schools.com/html/html5_intro.asp">
+                <img class="index-logo" alt="HTML5" title="HTML5"
+                     src="{% static 'images/HTML5-logo.png' %}"/>
+            </a>
+            <a href="//www.w3schools.com/css/css3_intro.asp">
+                <img class="index-logo" alt="CSS3" title="CSS3"
+                     src="{% static 'images/css-logo.png' %}"/>
+            </a>
+            <a href="//www.javascript.com/">
+                <img class="index-logo" alt="Javascript" title="Javascript"
+                     src="{% static 'images/JS.png' %}"/>
+            </a>
+        </div>
+    </div>
+</section>
+<section id="bootstrap-github" class="index-container">
+    <div class="index-content">
+        <div class="logo-container">
+            <a href="//getbootstrap.com/">
+                <img class="index-logo" alt="Bootstrap" title="Bootstrap"
+                     src="{% static 'images/Bootstrap_logo.svg.png' %}"/>
+            </a>
+            <a href="https://github.com/">
+                <img class="index-logo" alt="Github" title="Github"
+                     src="{% static 'images/github-octocat.png' %}"/>
+            </a>
+        </div>
+        <div class="text-container">
+            <h1>Bootstrap &amp; Github</h1>
+            <hr>
+            <p>
+                Bootstrap is a CSS framework that makes responsive, mobile-first design a breeze.
+                Github hosts my code in the cloud so I can work anytime from anywhere.
+            </p>
+        </div>
+    </div>
+</section>
 {% endblock %}

@@ -6,28 +6,38 @@ from django.views.generic import TemplateView, ListView, FormView
 from django.contrib.messages.views import SuccessMessageMixin
 
 # Relative imports
-from .models import About, Contact, FunFact
+from .models import About, Contact, FunFact, BrandInfo
 from .forms import ContactForm
 
 
-# Create your views here.
+# Home Page View
 class IndexView(TemplateView):
+
     template_name = 'home/index.html'
+
+    def get_context_data(self, **kwargs):
+        """
+        Get business info for home page
+        """
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['brand'] = BrandInfo.objects.latest('pub_date')
+        return context
 
 
 class AboutView(ListView):
+
     template_name = 'home/about.html'
     context_object_name = 'about'
     model = About
 
     def get_context_data(self, **kwargs):
         """
-        Populate list with random fun facts about me
+        Populate list with random fun facts about me, and get brand info
         """
-        all_facts = FunFact.objects.distinct()
-
         context = super(AboutView, self).get_context_data(**kwargs)
+        all_facts = FunFact.objects.distinct()
         context['fun_fact_list'] = random.sample(list(all_facts), 3)
+        context['brand'] = BrandInfo.objects.latest('pub_date')
         return context
 
     def get_queryset(self):

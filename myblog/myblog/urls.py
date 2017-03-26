@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^admin/', blog_admin.urls),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('home.urls')),
 ]
 

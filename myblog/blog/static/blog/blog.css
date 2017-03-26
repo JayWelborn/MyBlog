@@ -46,6 +46,7 @@
     max-width: 800px;
     padding: 20px;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .blog-list {
@@ -237,19 +238,4 @@ hr {
     width: 60%;
     border-color: #bbb;
     padding: 10px;
-}
-
-blockquote {
-    font-size: 14px;
-    font-style: italic;
-    font-family: 'Arsenal', serif;
-}
-
-ol {
-    font-family: 'Arsenal', serif;
-    list-style-type: upper-roman;
-}
-
-li {
-    padding: 3px;
 }

@@ -1,6 +1,119 @@
-#background-check {
+hr {
+    width: 66%;
+}
+
+nav.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron-home {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.jumbotron-home h1 {
+    margin-bottom: .1em;
+}
+
+.jumbotron-home hr {
+    border-color: #FFF;
+    box-shadow: 8px 8px 14px #000;
+}
+
+.jumbotron-home a {
+    background-color: rgba(171, 41, 48, 1);
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    font-size: 120%;
+    color: #fff;
+    word-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 8px 8px 14px #000;
+    position: relative;
+    top: 15px;
+}
+
+.jumbotron-home a:hover {
+    text-decoration: none;
+}
+
+.index-container {
     width: 100%;
-    height: calc(78vh -  50px);
-    background-color: red;
+    min-height: 760px;
     margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.index-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-container .logo-container {
+    max-height: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.index-container .index-logo {
+    max-height: 160px;
+    margin: 20px;
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(50, 50, 50, .6));
+    filter:         drop-shadow(0px 0px 7px rgba(50, 50, 50, .6));
+}
+
+.index-container .text-container {
+    text-align: center;
+    width: 450px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.index-container .text-container h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    margin-bottom: .5em;
+}
+
+.index-container .text-container p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+#python-django hr, #bootstrap-github hr{
+    border-color: #666;
+}
+
+#html-css-javascript {
+    flex-flow: row wrap-reverse;
+    padding: 15vh;
+    background: rgba(38, 91, 142, 1);
+    color: white;
+}
+
+#bootstrap-github {
+    padding: 15vh;
 }

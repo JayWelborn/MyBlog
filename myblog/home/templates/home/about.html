@@ -8,44 +8,51 @@
     <meta property="og:title" content="About me"/>
     <meta property="og:description" content="{{ about.bio|striptags }}"/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}"/>
 {% endblock %}
 
 {% block content %}
-<div class="page-header center"><h1>{{ about.title }}</h1></div>
-<div class="container">
-    <img class="portrait" src="{% static 'images/me.jpg' %}"/>
-    <div class="about">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <ul>
-                    <li>
-                        <span class="prompt">
-                            Name:
-                        </span>
-                        <span class="fact">
-                            {{ about.name }}
-                        </span>
-                    </li>
-                    {% for fact in fun_fact_list %}
-                    <li>
-                        <span class="prompt">
-                            {{ fact.prompt }}:
-                        </span>
-                        <span class="fact">
-                            {{ fact.fun_fact }}
-                        </span>
-                    </li>
-                    {% endfor %}
-                </ul>
-                <p class="bio">
-                    {{ about.bio|safe|linebreaks }}
-                </p>
-                <hr>
-                <p class="update">
-                    Date Updated: {{ about.pub_date }}
-                </p>
-            </div>
-        </div>
+<main>
+    <div class="bg"></div>
+    <div id="about-me-page">
+        <section id="brand-text">
+            <h1>{{ brand.title }}</h1>
+            <section class="body-copy">{{ brand.description|safe }}</section>
+        </section>
+        <section id="about-text">
+            <h1>{{ about.title }}</h1>
+            <img class="portrait" src="{% static 'images/me.jpg' %}"/>
+            <ul>
+                <li>
+                    <span class="prompt">
+                        Name:
+                    </span>
+                    <span class="fact">
+                        {{ about.name }}
+                    </span>
+                </li>
+                {% for fact in fun_fact_list %}
+                <li>
+                    <span class="prompt">
+                        {{ fact.prompt }}:
+                    </span>
+                    <span class="fact">
+                        {{ fact.fun_fact }}
+                    </span>
+                </li>
+                {% endfor %}
+            </ul>
+            <article class="body-copy" id="bio">
+                {{ about.bio|safe|linebreaks }}
+            </article>
+            <hr>
+            <p class="update">
+                Date Updated: {{ about.pub_date }}
+            </p>
+        </section>
     </div>
-</div>
+</main>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="{% static 'home/js/about.js' %}"></script>
 {% endblock %}

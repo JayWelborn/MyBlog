@@ -1,0 +1,13 @@
+blockquote {
+    font-size: 14px;
+    font-style: italic;
+}
+
+ol {
+    font-family: 'Arsenal', serif;
+    list-style-type: upper-roman;
+}
+
+li {
+    padding: 3px;
+}

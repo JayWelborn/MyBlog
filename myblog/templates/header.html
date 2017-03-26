@@ -7,16 +7,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
-    <link href="//fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Arsenal|Open+Sans|Oswald:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400|Lora" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static 'jw32x32.png' %}"/>
     {% block header %}
     {% endblock %}
-    <title>{% block title %}JayWelborn{% endblock %}</title>
+    <title>{% block title %}Fresh Start{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,40 +34,38 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home:index' %}">Home</a></li>
-                    <li><a href="{% url 'home:about' %}">About</a></li>
-                    <li><a href="{% url 'home:contact' %}">Contact</a></li>
+                    <li><a href="{% url 'home:index' %}">HOME</a></li>
+                    <li><a href="{% url 'home:about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'home:contact' %}">CONTACT</a></li>
+                    <li><a href="{% url 'blog:index' %}">BLOG</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                            role="button" aria-haspopup="true" aria-expanded="false">
-                            Projects<span class="caret"></span>
+                            PROJECTS<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'blog:index' %}">Blog</a></li>
                             <li><a href="{% url 'polls:index' %}">Polls</a></li>
                             <li><a href="{% url 'home:index' %}">This Website</a></li>
+                            <li><a href="http://www.chamberlinsax.com">ChamberlinSax.com</a></li>
                         </ul>
                     </li>
-
                 </ul>
-                <p class="navbar-text navbar-right">&copy; Jay Welborn 2017</p>
             </div>
         </div>
     </nav>
-
         {% block jumbotron %}
         {% endblock %}
-
-    <div class="container">
+    <div id="content">
         {% block content %}
             This is my homepage.
         {% endblock %}
     </div>
-    <br/>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'home/js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'home/js/home.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
 <footer>
     <div class="vertical center">
         &copy; Jay Welborn 2017

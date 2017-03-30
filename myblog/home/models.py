@@ -58,7 +58,6 @@ class Contact(models.Model):
     github = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
     twitter = models.URLField(blank=True)
-    instagram = models.URLField(blank=True)
     email = models.EmailField()
     pub_date = models.DateField(default=timezone.now)
 

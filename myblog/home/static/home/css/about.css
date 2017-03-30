@@ -18,6 +18,16 @@ main {
     background: url('../../images/blue-angle.jpg') no-repeat center center;
 }
 
+a {
+    text-decoration: none;
+    color: #265b8e;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1e3138;
+}
+
 #about-me-page {
     max-width: 840px;
     padding: 40px;
@@ -31,6 +41,7 @@ main {
 #brand-text {
     min-height: 25vh;
     margin-bottom: 0px;
+    line-height: 1.8em;
 }
 
 #brand-text h1, #about-text h1 {
@@ -49,6 +60,7 @@ main {
     margin-top: 50px;
     margin-bottom: 50px;
     min-height: 25vh;
+    line-height: 1.8em;
 }
 
 
@@ -62,12 +74,16 @@ main {
 
 #about-text ul li {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(100, 100, 100, .5);
 }
 
 #about-text img.portrait {
     width: 30%;
     float: right;
+}
+
+#about-text hr {
+    border-color: rgba(100, 100, 100, .5);
 }
 
 .prompt {

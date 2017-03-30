@@ -10,6 +10,8 @@ nav.navbar.navbar-default {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .jumbotron-home {
@@ -28,16 +30,16 @@ nav.navbar.navbar-default {
 }
 
 .jumbotron-home hr {
-    border-color: #FFF;
+    border-color: #dadada;
     box-shadow: 8px 8px 14px #000;
 }
 
 .jumbotron-home a {
-    background-color: rgba(171, 41, 48, 1);
+    background-color: rgba(108, 31, 43, 1);
     font-family: 'Ubuntu';
     font-weight: 600;
     font-size: 120%;
-    color: #fff;
+    color: #dadada;
     word-spacing: 1px;
     padding: 15px 30px;
     border-radius: 30px;
@@ -52,10 +54,11 @@ nav.navbar.navbar-default {
 
 .index-container {
     width: 100%;
-    min-height: 760px;
+    min-height: 600px;
     margin-top: 0px;
     display: flex;
     align-items: center;
+    padding: 8vh;
 }
 
 .index-content {
@@ -63,7 +66,7 @@ nav.navbar.navbar-default {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    max-width: 900px;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -86,8 +89,8 @@ nav.navbar.navbar-default {
 .index-container .text-container {
     text-align: center;
     width: 450px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    max-width: 80%;
+    padding: 2vh;
 }
 
 .index-container .text-container h1 {
@@ -108,12 +111,18 @@ nav.navbar.navbar-default {
 }
 
 #html-css-javascript {
-    flex-flow: row wrap-reverse;
-    padding: 15vh;
+    flex-flow: row wrap;
     background: rgba(38, 91, 142, 1);
-    color: white;
+    color: #dadada;
 }
 
-#bootstrap-github {
-    padding: 15vh;
+@media screen and (max-width: 600px) {
+
+    .index-container .text-container h1 {
+        font-size: 3.2em;
+    }
+
+    .index-container .index-logo {
+        max-height: 130px
+    }
 }

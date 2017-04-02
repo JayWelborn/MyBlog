@@ -16,17 +16,17 @@
 
 <main>
     <div class="bg"></div>
+    <!-- Display Success Message -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <!-- End Success Message -->
     <section id="contact-page">
         <h1>{{ contact.title }}</h1>
-        <!-- Display Success Message -->
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-success">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-        <!-- End Success Message -->
         <!-- Display Form Errors -->
         {% if form.errors %}
             {% for field in form %}

@@ -11,16 +11,7 @@ class IndexView(generic.ListView):
     template_name = 'blog/index.html'
     context_object_name = 'latest_blog_list'
     model = Entry
-    paginate_by = 5
-
-    def get_context_data(self, **kwargs):
-        """
-        Get list of tags
-        :return: tags
-        """
-        context = super(IndexView, self).get_context_data(**kwargs)
-        context['tags'] = Tag.objects.distinct()
-        return context
+    paginate_by = 6
 
     def get_queryset(self):
         """
@@ -58,6 +49,7 @@ class TagDetailView(generic.DetailView):
     model = Tag
     template_name = 'blog/tag_detail.html'
     context_object_name = 'tag'
+    paginate_by = 6
 
 
 class TestView(generic.TemplateView):

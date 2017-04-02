@@ -1,11 +1,10 @@
-blockquote {
-    font-size: 14px;
-    font-style: italic;
-}
+
 
 ol {
-    font-family: 'Arsenal', serif;
+    font-family: 'Lora', sans-serif;
     list-style-type: upper-roman;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 li {

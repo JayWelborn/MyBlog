@@ -32,7 +32,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     justify-content: space-around;
-    margin-bottom: 50px;
+    max-width: 840px;
 }
 
 #contact-page h1{
@@ -89,7 +89,6 @@ ul.social li {
 }
 
 .contact-form {
-    padding-bottom: 50px;
     font-family: 'Lora';
     max-width: 100%;
     padding-left: 0;

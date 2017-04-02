@@ -24,54 +24,66 @@
             }
         </style>
     {% else %}
-        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
+        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 
+            'images/blog-profile.jpg' %"/>
+        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 
+            'images/blog-profile.jpg' %}"/>
+        <style type="text/css">
+            .bg-blog-detail {
+                background: url({% static 'images/jumbotron-test.jpg' %}) no-repeat center center;
+            }
+        </style>
     {% endif %}
+    <style type="text/css">
+        .bg-blog {
+            background: url({% static 'images/blue-angle.jpg' %}) no-repeat center center;
+        }
+    </style>
 {% endblock %}
 
 {% block title %}{{ entry.title }}{% endblock %}
 
 
 {% block jumbotron %}
-{% if entry.header_image %}
-        <div class="bg bg-blog-detail"></div>
-        <div class="jumbotron vertical-center">
-            <div class="jumbotron-text">
-                <h1>{{ entry.title }}</h1>
-                <p></p>
-            </div>
-        </div>
-{% endif %}
+<div class="bg bg-blog-detail"></div>
+<div class="jumbotron vertical-center">
+    <div class="jumbotron-text">
+        <h1>{{ entry.title }}</h1>
+        <p></p>
+    </div>
+</div>
 {% endblock %}
 
 
 {% block content %}
+<div class="bg-blog"></div>
 <div class="blog">
-    {% if not entry.header_image %}
-    <div class="page-header center"><h1>{{ entry.title }}</h1></div>
-    {% endif %}
     {% if error_message %}
         <p><strong>{{ error_message }}</strong></p>
     {% endif %}
     <img class="blog-profile-picture" src="{% static 'images/blog-profile.jpg' %}"/>
     <div class="publication-info">
         Published on: <br/>
-        <div class="blog-date">{{ entry.pub_date.date }}</div>
+        <span class="blog-date">{{ entry.pub_date.date }}</span>
     </div>
     <div class="blog-entry">{{ entry.body|safe }}</div>
-</div>
 
-{% if entry.tags %}
-<div class="tags">
-    Tags:
-    {% for tag in entry.tags.all %}
-    <a href="{% url 'blog:tag_detail' tag.id tag.slug %}" class="tag-detail-link">
-        <span class="tag">
-            {{ tag.title }}
-        </span>
-    </a>
-    {% endfor %}
+
+    {% if entry.tags %}
+    <div class="tags">
+        Tags:
+        {% for tag in entry.tags.all %}
+        <a href="{% url 'blog:tag_detail' tag.id tag.slug %}" class="tag-detail-link">
+            <span class="tag">
+                {{ tag.title }}
+            </span>
+        </a>
+        {% endfor %}
+    </div>
 </div>
 {% endif %}
+{% endblock %}
 
+{% block scripts %}
+<script type="text/javascript" src="{% static 'blog/blog.js' %}"></script>
 {% endblock %}

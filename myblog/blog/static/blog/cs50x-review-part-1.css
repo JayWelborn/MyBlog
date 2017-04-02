@@ -17,17 +17,3 @@
     padding-left: 5px;
     padding-right: 4px;
 }
-
-blockquote {
-    font-size: 14px;
-    font-style: italic;
-}
-
-hr {
-    width: 60%;
-    margin-top: 2px
-}
-
-code {
-    font-family: 'Source Code Pro', monospace;
-}

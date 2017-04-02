@@ -8,50 +8,65 @@
     <meta property="og:title" content="Jay's Blog"/>
     <meta property="og.description" content="Welcome to my blog. Thanks for stopping by"/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
+    <style type="text/css">
+        .bg-blog {
+            background: url({% static 'images/blue-angle.jpg' %}) no-repeat center center;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
-    <div class="page-header center"><h1>Latest Entries:</h1></div>
-    <div class="blog">
-        {% if latest_blog_list %}
-            <ul class="blog-list">
-            {% for blog in latest_blog_list %}
-                <li>
-                    <span class="blog-title">
-                        <a href="{% url 'blog:detail' blog.pk blog.slug %}">{{ blog.title }}</a>
-                    </span>
-                    <span class="blog-date">
-                        {{ blog.pub_date.date }}
-                    </span>
-                </li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No blog entries are available.</p>
-        {% endif %}
-
-        {% if is_paginated %}
-        <div class="pagination">
-            <span class="page-links">
-                {% if page_obj.has_previous %}
-                <a href="/blog/?page={{ page_obj.previous_page_number }}">previous</a>
+    <div class="bg-blog"></div>
+    <h1 id="index-header">Latest Entries</h1>
+    <hr>
+    {% if latest_blog_list %}
+        <section class="blog-cards">
+        <!-- Generate card for each entry on the page -->
+        {% for blog in latest_blog_list %}
+            <div class="blog-card">
+                {% if blog.header_image %}
+                <a href="{% url 'blog:detail' blog.pk blog.slug %}">
+                    <img class="blog-card-header" src="{{ blog.header_image.url }}">
+                </a>
+                {% else %}
+                <a href="{% url 'blog:detail' blog.pk blog.slug %}">
+                    <img class="blog-card-header" src="{% static 'images/jumbotron-test.jpg' %}">
+                </a>
                 {% endif %}
-                <span class="page-current">
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                <span class="blog-title">
+                    <a href="{% url 'blog:detail' blog.pk blog.slug %}">{{ blog.title }}</a>
                 </span>
-                {% if page_obj.has_next %}
-                <a href="/blog/?page={{ page_obj.next_page_number }}">next</a>
-                {% endif %}
-            </span>
-        </div>
-        {% endif %}
-    </div>
-
-    <!--
-    {% if tags %}
-    <ul class="tag-list">
-        {% for tag in tags %}<li class=".tag">{{ tag.title }}</li>{% endfor %}
-    </ul>
+                <hr>
+                <span class="blog-date">
+                    {{ blog.pub_date.date }}
+                </span>
+            </div>
+        {% endfor %}
+        <!-- End Cards -->
+        </section>
+    <!-- If no entries to display -->
+    {% else %}
+        <p>No blog entries are available.</p>
     {% endif %}
-    -->
+    <hr>
+    <!-- Display pagination links if paginated -->
+    {% if is_paginated %}
+    <section class="pagination">
+        <span class="page-links">
+            {% if page_obj.has_previous %}
+            <a href="/blog/?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="page-current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+            <a href="/blog/?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </section>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'blog/blog.js' %}"></script>
 {% endblock %}

@@ -3,6 +3,7 @@ from django.contrib import admin
 from blog.models import Tag, Entry
 from polls.models import Question, Choice
 from home.models import About, Contact, FunFact, BrandInfo
+from bingo.models import BingoBlock, BingoCard, FreeSpace
 
 
 # Add blog entries
@@ -16,19 +17,6 @@ class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'pub_date')
     list_filter = ['pub_date']
-
-
-# add about me page
-class AboutMe(admin.ModelAdmin):
-    """
-    TODO
-    """
-
-
-class ContactMe(admin.ModelAdmin):
-    """
-    TODO
-    """
 
 
 # Add choices to Polls DB
@@ -50,6 +38,28 @@ class QuestionAdmin(admin.ModelAdmin):
     search_fields = ['question_text']
 
 
+class BingoBlockInline(admin.TabularInline):
+    model = BingoBlock
+    extra = 24
+    max_num = 30
+
+
+class FreeSpaceInline(admin.TabularInline):
+    model = FreeSpace
+    extra = 1
+    max_num = 1
+
+
+class BingoAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('Title', {'fields': ['title', 'slug']}),
+        ('Publication Date', {'fields': ['pub_date']}),
+    ]
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title', 'pub_date')
+    list_filter = ['pub_date']
+    inlines = [BingoBlockInline, FreeSpaceInline]
+
 # Customizes header on admin site
 class MyAdminSite(admin.AdminSite):
     site_header = 'Jay Welborn Administration'
@@ -63,3 +73,4 @@ blog_admin.register(About)
 blog_admin.register(Contact)
 blog_admin.register(FunFact)
 blog_admin.register(BrandInfo)
+blog_admin.register(BingoCard, BingoAdmin)

@@ -31,31 +31,10 @@ class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
 
-    def get_queryset(self):
-        """
-        Excludes any questions that aren't published yet or don't
-        have choices associated with them.
-        """
-        questions_with_choices = Question.objects.filter(
-            choice__isnull=False
-        ).distinct()
-        return questions_with_choices.filter(
-            pub_date__lte=timezone.now())
-
 
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
-
-    def get_queryset(self):
-        """
-        Excludes results for any questions not published yet.
-        """
-        questions_with_choices = Question.objects.filter(
-            choice__isnull=False
-        ).distinct()
-        return questions_with_choices.filter(
-            pub_date__lte=timezone.now())
 
 
 def vote(request, question_id):

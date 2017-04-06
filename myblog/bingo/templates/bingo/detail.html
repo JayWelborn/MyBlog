@@ -1,0 +1,23 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bingo/bingo.css' %}"/>
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'bingo:detail' card.id, card.slug %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ card.title }}"/>
+    <meta property="og:description" content="{{ card.title }}"/>
+    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
+{% endblock %}
+
+{% block content %}
+<table id='bingo-card'>
+    <tr><th>{{ card.title }}</th></tr>
+    <tr>
+    {% for block in blocks %}
+        <td id='block-number-{{ forloop.counter }}'>{{ block }}</td>
+        {% if forloop.counter|divisibleby:5 %}
+        </tr><tr>
+        {% endif %}
+    {% endfor %}
+    </tr>
+{% endblock %}

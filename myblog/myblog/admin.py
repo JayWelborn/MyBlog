@@ -54,6 +54,7 @@ class BingoAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Title', {'fields': ['title', 'slug']}),
         ('Publication Date', {'fields': ['pub_date']}),
+        ('Optional Media', {'fields': ['header_image', 'victory_song']})
     ]
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'pub_date')

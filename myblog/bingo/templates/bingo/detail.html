@@ -2,22 +2,51 @@
 {% load static %}
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'bingo/bingo.css' %}"/>
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'bingo:detail' card.id, card.slug %}" />
+    <!-- Facebook og properties -->
+    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'bingo:detail' card.id card.slug %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ card.title }}"/>
     <meta property="og:description" content="{{ card.title }}"/>
     <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
+    <!-- End Facebook properties -->
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@__JayWelborn__" />
+    <meta name="twitter:title" content="{{ card.title }}" />
+    <meta name="twitter:description" content="{{ card.body|striptags }}" />
+    <!-- end twitter cards -->
+    {% if card.header_image %}
+        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ card.header_image.url }}"/>
+        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{{ card.header_image.url }}" />
+        <style type="text/css">
+            #bingo-card tr th {
+                background: url('{{ card.header_image.url }}');
+            }
+        </style>
+    {% else %}
+        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 
+            'images/blog-profile.jpg' %"/>
+        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 
+            'images/blog-profile.jpg' %}"/>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
 <table id='bingo-card'>
-    <tr><th>{{ card.title }}</th></tr>
-    <tr>
-    {% for block in blocks %}
-        <td id='block-number-{{ forloop.counter }}'>{{ block }}</td>
-        {% if forloop.counter|divisibleby:5 %}
-        </tr><tr>
-        {% endif %}
-    {% endfor %}
-    </tr>
+    <thead><tr><th colspan="5"><h1>{{ card.title }}</h1></th></tr></thead>
+    <tbody>
+        <tr id="row-number-one">
+        {% for block in blocks %}
+            <td id='block-number-{{ forloop.counter }}' class="no-select">{{ block }}</td>
+            {% if forloop.counter|divisibleby:5 %}
+            </tr><tr id='row-number-{{ forloop.counter }}'>
+            {% endif %}
+        {% endfor %}
+        </tr>
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{% static 'bingo/bingo.js' %}"></script>
 {% endblock %}

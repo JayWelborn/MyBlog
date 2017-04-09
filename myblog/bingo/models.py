@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 
+from .fields import AudioFileField
+
 # BingoCard is a class containing the title of the card to be displayed
 class BingoCard(models.Model):
     
@@ -12,6 +14,9 @@ class BingoCard(models.Model):
     title = models.CharField(max_length=140, unique=True)
     slug = models.SlugField(max_length=140, unique=True)
     pub_date = models.DateField(default=timezone.now)
+    header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
+    victory_song = AudioFileField(upload_to='media/audio/%Y/%m/%d', max_upload_size=5242880, blank=True)
+
 
     def __str__(self):
         return self.title

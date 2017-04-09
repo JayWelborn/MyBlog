@@ -127,12 +127,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 STATIC_URL = '/static/'
 
 # Media files (images uploaded via admin page/authenticated users)
 # https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-MEDIA_ROOT
-
 MEDIA_URL = '/media/'
 
 
@@ -143,3 +141,36 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = 'jesse.welborn@gmail.com'
 EMAIL_HOST_USER = 'jesse.welborn@gmail.com'
+
+# Change max upload size to accommodate MP3s
+MAX_UPLOAD_MEMORY_SIZE = 10485760
+
+# Enable tinyMCE plugins
+TINYMCE_DEFAULT_CONFIG = {
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'link image preview codesample contextmenu table code charmap textcolor colorpicker '
+                'hr paste textpattern',
+    'toolbar1': 'bold italic underline forecolor backcolor| alignleft aligncenter alignright alignjustify '
+               '| bullist numlist | outdent indent | table | link image | codesample | preview code | charmap ',
+    'contextmenu': 'formats | link image | forecolor backcolor',
+    'menubar': True,
+    'inline': False,
+    'statusbar': True,
+    'height': 360,
+    'paste_data_images': True,
+    'textpattern_patterns': [
+        {'start': '*', 'end': '*', 'format': 'italic'},
+        {'start': '**', 'end': '**', 'format': 'bold'},
+        {'start': '#', 'format': 'h1'},
+        {'start': '##', 'format': 'h2'},
+        {'start': '###', 'format': 'h3'},
+        {'start': '####', 'format': 'h4'},
+        {'start': '#####', 'format': 'h5'},
+        {'start': '######', 'format': 'h6'},
+        {'start': '1. ', 'cmd': 'InsertOrderedList'},
+        {'start': '* ', 'cmd': 'InsertUnorderedList'},
+        {'start': '- ', 'cmd': 'InsertUnorderedList'}
+    ],
+}
+TINYMCE_SPELLCHECKER = True

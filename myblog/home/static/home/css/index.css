@@ -7,7 +7,11 @@ nav.navbar.navbar-default {
 }
 
 .jumbotron {
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
@@ -16,7 +20,11 @@ nav.navbar.navbar-default {
 
 .jumbotron-home {
     position: absolute;
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -58,7 +66,6 @@ nav.navbar.navbar-default {
     margin-top: 0px;
     display: flex;
     align-items: center;
-    padding: 8vh;
 }
 
 .index-content {
@@ -66,9 +73,11 @@ nav.navbar.navbar-default {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    max-width: 80%;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .index-container .logo-container {
@@ -90,7 +99,8 @@ nav.navbar.navbar-default {
     text-align: center;
     width: 450px;
     max-width: 80%;
-    padding: 2vh;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
 }
 
 .index-container .text-container h1 {

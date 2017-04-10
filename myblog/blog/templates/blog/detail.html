@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block header %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/prism.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/blog.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
+    <script src="{% static 'blog/prism.js' %}"></script>
     <!-- Facebook og properties -->
     <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id entry.slug%}" />
     <meta property="og:type" content="blog" />

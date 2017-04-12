@@ -45,6 +45,7 @@ td {
     background-color: white;
     cursor: pointer;
     transition: .1s ease-in-out;
+    padding: 2px;
 }
 
 .clicked-block {

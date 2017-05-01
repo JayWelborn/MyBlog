@@ -173,4 +173,4 @@ TINYMCE_DEFAULT_CONFIG = {
         {'start': '- ', 'cmd': 'InsertUnorderedList'}
     ],
 }
-TINYMCE_SPELLCHECKER = True
+TINYMCE_SPELLCHECKER = False

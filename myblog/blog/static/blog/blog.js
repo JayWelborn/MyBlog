@@ -8,4 +8,4 @@ $(document).ready(function(){
     $(window).scroll(function(){
         blogParallax();
     });
-})
+})  

@@ -29,6 +29,7 @@ a:hover {
 .navbar {
     position: relative;
     z-index: 1;
+    height: 65px;
 }
 
 /*
@@ -52,12 +53,17 @@ Change color of gradient to match color scheme of site
     font-weight: 400;
 }
 
+.navbar-nav {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .navbar a:hover {
     font-weight: 500;
 }
 
 .brand-image {
-    max-height: 44px;
+    max-height: 45px;
 }
 
 .bg {

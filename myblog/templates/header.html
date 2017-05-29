@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}"/>
     <link href="//fonts.googleapis.com/css?family=Arsenal|Open+Sans|Oswald:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Lora" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{% static 'jw32x32.png' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'jay_icon.png' %}"/>
     {% block header %}
     {% endblock %}
     <title>{% block title %}Fresh Start{% endblock %}</title>
@@ -20,7 +20,7 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <a class="navbar-brand" href="{% url 'home:index' %}">
-                        <img alt="Jay Welborn" src="{% static 'jwbrand.png' %}"/>
+                    <img class='brand-image' alt="Jay Welborn" src="{% static 'jay_logo.png' %}"/>
                 </a>
                 <button type="button" class="navbar-toggle collapsed"
                         data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"

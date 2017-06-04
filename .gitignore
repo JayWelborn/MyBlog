@@ -3,6 +3,12 @@ __pycache__/
 *.pyc
 *$py.class
 
+# uncollected static files
+/bingo/static/
+/blog/static/
+/home/static/
+/polls/static/
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt

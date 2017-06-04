@@ -1,0 +1,12 @@
+
+
+ol {
+    font-family: 'Lora', sans-serif;
+    list-style-type: upper-roman;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    padding: 3px;
+}

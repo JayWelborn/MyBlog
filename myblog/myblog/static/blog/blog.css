@@ -1,0 +1,292 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+
+.bg {
+    height: 60vh;
+}
+
+.bg-blog {
+    position: fixed;
+    width: 150%;
+    height: 100vh;
+    max-height: 1080px;
+    top:0;
+    left:-25%;
+    z-index: -2;
+}
+
+.jumbotron {
+    position: relative;
+    height: calc(60vh - 50px);
+    min-width: 100%;
+    max-height: 1080px;
+    color: #FFFFFF;
+    background: transparent;
+    font-family: 'Ubunut', sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1#index-header {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 6em;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    h1#index-header {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 250%
+    }
+    h1#index-header {
+        font-size: 5em;
+    }
+}
+
+
+
+.blog-cards {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
+    width: 80%;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.blog-card {
+    width: 250px;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px rgba(50, 50, 50, .6);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.blog-card-header {
+    height: 60%;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.blog-title {
+    display: block;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.blog-title {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.blog-card hr {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: .6em;
+    margin-bottom: .6em;
+}
+
+.blog-date {
+    display: block;
+    font-size: 80%;
+    font-family: 'Lora', serif;
+    color: #666;
+}
+
+.blog {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    width: 95%;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 7px rgba(50, 50, 50, .6);
+    border-radius: 5px;
+
+}
+
+.blog-profile-picture {
+    float: left;
+    max-width: 75px;
+    max-height: 75px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.publication-info {
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.pagination {
+    width: 100%;
+    text-align: center;
+    font-family: 'Lora', serif;
+}
+
+.blog-image {
+    max-height: 150px;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.first-sentence {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.blog-entry {
+    font-family: 'Lora', serif;
+    margin-top: 20px;
+    font-size: 1.15em;
+    word-spacing: 1px;
+    line-height: 140%;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-entry > p {
+    margin-bottom: 20px;
+}
+
+.tags {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 90%
+}
+
+.tag {
+    display: inline-block;
+    margin: 5px;
+    width: auto;
+    padding: 4px 8px 2px 8px;
+    border-radius: 20px;
+    background-color: #dfdfdf;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.tag:hover {
+    background-color: #e9e9e9;
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.tag-detail-link {
+    text-decoration: none;
+    color: #68829e;
+    font-size: 95%;
+    font-family: 'OpenSans', sans-serif;
+    word-spacing: -1px;
+}
+
+.tag-detail-link:hover {
+    text-decoration: none;
+    color: #fb6542;
+}
+
+.blog h3 {
+    font-family: 'Ubuntu';
+    text-align: center;
+    letter-spacing: 1.1px;
+    word-spacing: 4px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.confession {
+    font-style: italic;
+    font-size: 90%;
+    color: #555
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 4px;
+    font-size: 95%;
+}
+
+blockquote {
+    display: block;
+    font-size: 96%;
+    font-style: normal;
+    font-family: 'Lora', serif;
+    box-shadow: 2px 2px 7px rgba(50, 50, 50, .6);
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+    color: #666;
+    text-align: justify;
+
+    /* borders */
+    border-left: 15px solid #67752b;
+    border-right: 2px solid #67752b;
+
+    border-radius: 3px;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: 'Lora', serif;
+  font-size: 450%;
+  font-weight: bold;
+  color: #889bb6;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top: 30px;
+}
+
+hr {
+    width: 60%;
+    border-color: #bbb;
+    padding: 10px;
+}

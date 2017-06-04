@@ -1,0 +1,119 @@
+.navbar {
+    margin-bottom: 0px;
+}
+
+main {
+    overflow: hidden;
+}
+
+.bg {
+    position: fixed;
+    width: 150%;
+    height: 100vh; /*same height as jumbotron */
+    max-height: 1080px;
+    top:0;
+    left:-25%;
+    z-index: -1;
+    background-size: cover;
+    background: url('../../images/blue-angle.jpg') no-repeat center center;
+}
+
+a {
+    text-decoration: none;
+    color: #265b8e;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1e3138;
+}
+
+#about-me-page {
+    max-width: 840px;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0)
+}
+
+#brand-text {
+    min-height: 25vh;
+    margin-bottom: 0px;
+    line-height: 1.8em;
+}
+
+#brand-text h1, #about-text h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 6em;
+    margin-bottom: 40px;
+}
+
+#about-text {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    min-height: 25vh;
+    line-height: 1.8em;
+}
+
+
+#about-text ul {
+    width: 60%;
+    list-style-type: none;
+    font-family: 'Lora', serif;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+#about-text ul li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(100, 100, 100, .5);
+}
+
+#about-text img.portrait {
+    width: 30%;
+    float: right;
+}
+
+#about-text hr {
+    border-color: rgba(100, 100, 100, .5);
+}
+
+.prompt {
+    font-weight: bold;
+    font-style: italic;
+    display: inline-block;
+    width: 35%;
+    margin-right: 5px;
+}
+
+.fact {
+    display: inline-block;
+    width: 60%;
+}
+
+.body-copy {
+    text-align: left;
+    font-family: 'Lora', sans-serif;
+    font-size: 1.2em;
+}
+
+#bio {
+    display: block;
+    width: 60%;
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+    #brand-text h1, #about-text h1 {
+        font-size: 350%;
+    }
+    #bio {
+        width: 100%;
+    }
+}

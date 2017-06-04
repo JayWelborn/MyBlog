@@ -1,0 +1,139 @@
+hr {
+    width: 66%;
+}
+
+nav.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.jumbotron-home {
+    position: absolute;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.jumbotron-home h1 {
+    margin-bottom: .1em;
+}
+
+.jumbotron-home hr {
+    border-color: #dadada;
+    box-shadow: 8px 8px 14px #000;
+}
+
+.jumbotron-home a {
+    background-color: rgba(108, 31, 43, 1);
+    font-family: 'Ubuntu';
+    font-weight: 600;
+    font-size: 120%;
+    color: #dadada;
+    word-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 8px 8px 14px #000;
+    position: relative;
+    top: 15px;
+}
+
+.jumbotron-home a:hover {
+    text-decoration: none;
+}
+
+.index-container {
+    width: 100%;
+    min-height: 600px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.index-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.index-container .logo-container {
+    max-height: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.index-container .index-logo {
+    max-height: 160px;
+    margin: 20px;
+    -webkit-filter: drop-shadow(0px 0px 7px rgba(50, 50, 50, .6));
+    filter:         drop-shadow(0px 0px 7px rgba(50, 50, 50, .6));
+}
+
+.index-container .text-container {
+    text-align: center;
+    width: 450px;
+    max-width: 80%;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.index-container .text-container h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    font-size: 4em;
+    margin-bottom: .5em;
+}
+
+.index-container .text-container p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+#python-django hr, #bootstrap-github hr{
+    border-color: #666;
+}
+
+#html-css-javascript {
+    flex-flow: row wrap;
+    background: rgba(38, 91, 142, 1);
+    color: #dadada;
+}
+
+@media screen and (max-width: 600px) {
+
+    .index-container .text-container h1 {
+        font-size: 3.2em;
+    }
+
+    .index-container .index-logo {
+        max-height: 130px
+    }
+}

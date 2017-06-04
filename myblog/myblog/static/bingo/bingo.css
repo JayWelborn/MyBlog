@@ -1,0 +1,67 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+#bingo-card {
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border: 2px solid black;
+    outline: 2px solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+#bingo-card th {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    border: 2px solid black;
+    outline-top: 2px solid white;
+    background-color: #265b8e;
+    color: white;
+}
+
+#bingo-card th h1 {
+    font-size: 5em;
+    padding: .2em;
+    letter-spacing: 2px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+td {
+    box-sizing: border-box;
+    text-align: center;
+    height: 160px;
+    max-width: 20%;
+    border: 2px solid black;
+    font-family: 'Lora', serif;
+    font-size: 1.3em;
+    background-color: white;
+    cursor: pointer;
+    transition: .1s ease-in-out;
+    padding: 2px;
+}
+
+.clicked-block {
+    background-color: #67752b;
+    color: white;
+    transition: .1s ease-in-out;n
+}
+
+#row-number-25 {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    #bingo-card td {
+        font-size: 1em;
+        word-wrap: break-word;
+    }
+}

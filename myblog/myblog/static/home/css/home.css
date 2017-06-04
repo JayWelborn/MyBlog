@@ -1,0 +1,222 @@
+body {
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #dadada;
+}
+
+a {
+    text-decoration: none;
+    color: #265b8e;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1e3138;
+}
+
+#content {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+
+.navbar {
+    position: relative;
+    z-index: 1;
+    height: 65px;
+}
+
+/*
+Change color of gradient to match color scheme of site
+*/
+.navbar-default {
+  background-image: -webkit-linear-gradient(top, #fff 0%, #dadada 100%);
+  background-image:      -o-linear-gradient(top, #fff 0%, #dadada 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dadada));
+  background-image:         linear-gradient(to bottom, #fff 0%, #dadada 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdadada', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+}
+
+.navbar a {
+    font-family: 'Ubuntu', 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar a:hover {
+    font-weight: 500;
+}
+
+.brand-image {
+    max-height: 45px;
+}
+
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 90vh; /*same height as jumbotron */
+    max-height: 760px;
+    top:0;
+    left:0;
+    z-index: -1;
+    background-size: cover;
+}
+
+.bg-index {
+    background: url('../../images/jumbotron-test.jpg') no-repeat center center;
+}
+
+.jumbotron {
+    position: relative;
+    height: calc(90vh - 50px);
+    min-width: 100%;
+    max-height: 710px;
+    color: #dadada;
+    background: transparent;
+    margin-bottom: 0px;
+}
+
+.jumbotron-text {
+    text-shadow: 8px 8px 14px #000;
+    text-align: center;
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 8px 8px 14px #000;
+}
+
+.jumbotron h1 {
+    font-family: 'Ubuntu';
+    font-size: 600%;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.jumbotron p {
+    font-size: 300%;
+    font-family: 'Lora';
+    font-style: italic;
+    letter-spacing: -1px;
+    word-spacing: 3px;
+    padding-bottom: 5px;
+}
+
+.page-header {
+    padding-top: 1.5%;
+    font-family: 'Oswald';
+}
+
+.page-header h1 {
+    font-size: 500%;
+}
+
+@media screen and (max-width: 600px) {
+
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 150%
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .bg, .jumbotron {
+        height: 100vh;
+    }
+    .jumbotron h1 {
+        font-size: 400%;
+    }
+    .jumbotron p {
+        font-size: 150%;
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+    .page-header h1 {
+        font-size: 300%;
+    }
+}
+
+.jumbotron ul {
+    font-size: 250%;
+}
+
+.jumbotron li {
+    padding: 10px;
+}
+
+.navbar-brand {
+    padding: 8px;
+}
+
+.page-header {
+    margin-top: -30px;
+    margin-top: -30px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Lora';
+    font-size: 75%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(100, 100, 100, .5);
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+}
+
+.update {
+    font-size: 70%;
+    text-align: center;
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

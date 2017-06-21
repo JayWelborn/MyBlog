@@ -183,8 +183,28 @@ h1#index-header {
     margin-right: auto;
 }
 
-.blog-entry > p {
-    margin-bottom: 20px;
+.blog-entry p {
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+.blog-entry ul {
+    list-style: disc outside none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.blog-entry img {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.blog-entry p>code {
+    font-family: 'Ubuntu Mono';
+    background-color: #eef;
+    color: #1e3138;
+    display: inline-block;
+    padding: 3px 10px;
 }
 
 .tags {
@@ -198,7 +218,7 @@ h1#index-header {
     font-size: 90%
 }
 
-.tag {
+.blog-tag {
     display: inline-block;
     margin: 5px;
     width: auto;

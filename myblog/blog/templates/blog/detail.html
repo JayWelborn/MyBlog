@@ -76,7 +76,7 @@
         Tags:
         {% for tag in entry.tags.all %}
         <a href="{% url 'blog:tag_detail' tag.id tag.slug %}" class="tag-detail-link">
-            <span class="tag">
+            <span class="blog-tag">
                 {{ tag.title }}
             </span>
         </a>

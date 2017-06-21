@@ -183,7 +183,11 @@ TINYMCE_DEFAULT_CONFIG = {
         {'text': 'C', 'value': 'c'},
         {'text': 'C#', 'value': 'csharp'},
         {'text': 'C++', 'value': 'cpp'},
-        {'text': 'Bash', 'value': 'bash'}
+        {'text': 'Bash', 'value': 'bash'},
+        {'text': 'Apache', 'value': 'apacheconf'},
+        {'text': 'Django', 'value': 'django'},
+        {'text': 'Sass', 'value': 'sass'},
+        {'text': 'SQL', 'value': 'sql'},
     ],
 }
 TINYMCE_SPELLCHECKER = False

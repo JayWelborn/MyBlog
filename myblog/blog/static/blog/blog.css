@@ -201,10 +201,11 @@ h1#index-header {
 
 .blog-entry p>code {
     font-family: 'Ubuntu Mono';
-    background-color: #eef;
+    background-color: #dadada;
     color: #1e3138;
     display: inline-block;
-    padding: 3px 10px;
+    padding: 0px 5px;
+    border-radius: 3px;
 }
 
 .tags {

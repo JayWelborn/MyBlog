@@ -78,7 +78,12 @@ Change color of gradient to match color scheme of site
 
 .bg-index {
     background: url('../../images/jumbotron-test.jpg') no-repeat center center;
-    background-size: cover;
+}
+
+@media screen and (orientation:landscape) {
+    .bg-index{
+        background-size: 100% auto;
+    }
 }
 
 .jumbotron {

@@ -29,7 +29,7 @@ a:hover {
 .navbar {
     position: relative;
     z-index: 1;
-    height: 65px;
+    min-height: 65px;
 }
 
 /*

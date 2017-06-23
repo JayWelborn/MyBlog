@@ -24,6 +24,11 @@
             .bg-blog-detail {
                 background: url('{{ entry.header_image.url }}') no-repeat center center;
             }
+            @media screen and (orientation:landscape) {
+                .bg-blog-detail{
+                    background-size: 100% auto;
+                }
+            }
         </style>
     {% else %}
         <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 
@@ -33,6 +38,7 @@
         <style type="text/css">
             .bg-blog-detail {
                 background: url({% static 'images/jumbotron-test.jpg' %}) no-repeat center center;
+                background-size: 100%;
             }
         </style>
     {% endif %}

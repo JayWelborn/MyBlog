@@ -74,11 +74,11 @@ Change color of gradient to match color scheme of site
     top:0;
     left:0;
     z-index: -1;
-    background-size: cover;
 }
 
 .bg-index {
     background: url('../../images/jumbotron-test.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 .jumbotron {

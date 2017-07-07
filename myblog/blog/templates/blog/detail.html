@@ -40,6 +40,11 @@
                 background: url({% static 'images/jumbotron-test.jpg' %}) no-repeat center center;
                 background-size: 100%;
             }
+             @media screen and (orientation:landscape) {
+                .bg-blog-detail{
+                    background-size: 100% auto;
+                }
+            }
         </style>
     {% endif %}
     <style type="text/css">

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/'|add:entry.slug|add:'.css'  %}"/>
     <script src="{% static 'blog/prism.js' %}"></script>
     <!-- Facebook og properties -->
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'blog:detail' entry.id entry.slug%}" />
+    <meta property="og:url" content="http://www.jaywelborn.com{% url 'blog:detail' entry.id entry.slug%}" />
     <meta property="og:type" content="blog" />
     <meta property="og:title" content="{{ entry.title }}" />
     <meta property="og:description" content="{{ entry.body|striptags }}"/>
@@ -18,8 +18,8 @@
     <meta name="twitter:title" content="{{ entry.title }}" />
     <meta name="twitter:description" content="{{ entry.body|striptags }}" />
     {% if entry.header_image %}
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}"/>
-        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{{ entry.header_image.url }}" />
+        <meta property="og:image" content="http://www.jaywelborn.com{{ entry.header_image.url }}"/>
+        <meta name="twitter:image" content="http://www.jaywelborn.com{{ entry.header_image.url }}" />
         <style type="text/css">
             .bg-blog-detail {
                 background: url('{{ entry.header_image.url }}') no-repeat center center;
@@ -31,9 +31,9 @@
             }
         </style>
     {% else %}
-        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 
+        <meta name="twitter:image" content="http://www.jaywelborn.com{% static 
             'images/blog-profile.jpg' %"/>
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 
+        <meta property="og:image" content="http://www.jaywelborn.com{% static 
             'images/blog-profile.jpg' %}"/>
         <style type="text/css">
             .bg-blog-detail {

@@ -3,11 +3,11 @@
 {% block header %}
     <link rel="stylesheet" type="text/css" href="{% static 'bingo/bingo.css' %}"/>
     <!-- Facebook og properties -->
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'bingo:detail' card.id card.slug %}" />
+    <meta property="og:url" content="http://www.jaywelborn.com{% url 'bingo:detail' card.id card.slug %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ card.title }}"/>
     <meta property="og:description" content="{{ card.title }}"/>
-    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/me.jpg' %}"/>
+    <meta property="og:image" content="http://www.jaywelborn.com{% static 'images/me.jpg' %}"/>
     <!-- End Facebook properties -->
     <!-- Twitter cards -->
     <meta name="twitter:card" content="summary" />
@@ -16,17 +16,17 @@
     <meta name="twitter:description" content="{{ card.body|striptags }}" />
     <!-- end twitter cards -->
     {% if card.header_image %}
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{{ card.header_image.url }}"/>
-        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{{ card.header_image.url }}" />
+        <meta property="og:image" content="http://www.jaywelborn.com{{ card.header_image.url }}"/>
+        <meta name="twitter:image" content="http://www.jaywelborn.com{{ card.header_image.url }}" />
         <style type="text/css">
             #bingo-card tr th {
                 background: url('{{ card.header_image.url }}');
             }
         </style>
     {% else %}
-        <meta name="twitter:image" content="https://jaywelborn.pythonanywhere.com{% static 
+        <meta name="twitter:image" content="http://www.jaywelborn.com{% static 
             'images/blog-profile.jpg' %"/>
-        <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 
+        <meta property="og:image" content="http://www.jaywelborn.com{% static 
             'images/blog-profile.jpg' %}"/>
     {% endif %}
 {% endblock %}

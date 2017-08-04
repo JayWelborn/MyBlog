@@ -3,11 +3,11 @@
 {% block title %}{{ about.title }}{% endblock %}
 
 {% block header %}
-    <meta property="og:url" content="https://jaywelborn.pythonanywhere.com{% url 'home:about' %}" />
+    <meta property="og:url" content="//www.jaywelborn.com{% url 'home:about' %}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="About me"/>
     <meta property="og:description" content="{{ about.bio|striptags }}"/>
-    <meta property="og:image" content="https://jaywelborn.pythonanywhere.com{% static 'images/blog-profile.jpg' %}"/>
+    <meta property="og:image" content="//www.jaywelborn.com{% static 'images/blog-profile.jpg' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/about.css' %}"/>
 {% endblock %}
 

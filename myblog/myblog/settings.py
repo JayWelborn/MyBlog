@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'jaywelborn.pythonanywhere.com',
+    'jaywelborn.com',
+    'www.jaywelborn.com',
 ]
 
 # Application definition

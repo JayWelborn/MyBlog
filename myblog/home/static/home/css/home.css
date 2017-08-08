@@ -88,7 +88,6 @@ Change color of gradient to match color scheme of site
 }
 
 .jumbotron {
-    position: relative;
     height: calc(90vh - 50px);
     width: 100%;
     max-height: 710px;

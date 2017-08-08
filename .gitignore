@@ -4,10 +4,10 @@ __pycache__/
 *$py.class
 
 # uncollected static files
-/bingo/static/
-/blog/static/
-/home/static/
-/polls/static/
+myblog/bingo/static/*
+myblog/blog/static/*
+myblog/home/static/*
+myblog/polls/static/*
 
 # Installer logs
 pip-log.txt
@@ -43,4 +43,4 @@ new-entry.css
 reference.html
 
 # local media files
-/myblog/myblog/media/
+myblog/myblog/media/*

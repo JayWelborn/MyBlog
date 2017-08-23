@@ -190,6 +190,8 @@ TINYMCE_DEFAULT_CONFIG = {
         {'text': 'Django', 'value': 'django'},
         {'text': 'Sass', 'value': 'sass'},
         {'text': 'SQL', 'value': 'sql'},
+        {'text': 'Yaml', 'value': 'yaml'},
+        {'text': 'JSON', 'value': 'json'},
     ],
 }
 TINYMCE_SPELLCHECKER = False

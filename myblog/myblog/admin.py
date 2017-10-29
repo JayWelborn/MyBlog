@@ -61,6 +61,7 @@ class BingoAdmin(admin.ModelAdmin):
     list_filter = ['pub_date']
     inlines = [BingoBlockInline, FreeSpaceInline]
 
+
 # Customizes header on admin site
 class MyAdminSite(admin.AdminSite):
     site_header = 'Jay Welborn Administration'

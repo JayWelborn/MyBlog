@@ -78,6 +78,7 @@ h1#index-header {
 
 .blog-card {
     width: 250px;
+    height: 300px;
     max-width: 100%;
     overflow: hidden;
     margin-bottom: 40px;
@@ -91,8 +92,12 @@ h1#index-header {
     text-align: center;
 }
 
-.blog-card-header {
+.blog-card a {
     height: 60%;
+}
+
+.blog-card-header {
+    height: 100%;
     width: 100%;
     flex-grow: 0;
     flex-shrink: 0;

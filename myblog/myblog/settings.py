@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -195,3 +196,6 @@ TINYMCE_DEFAULT_CONFIG = {
     ],
 }
 TINYMCE_SPELLCHECKER = False
+
+#Enable NoCaptcha Recaptcha
+NOCAPTCHA = True

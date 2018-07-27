@@ -2,6 +2,8 @@
 from django import forms
 from django.core.mail import send_mail, EmailMessage
 
+from captcha.fields import ReCaptchaField
+
 
 # create a contact form to send email to my email address
 class ContactForm(forms.Form):
@@ -14,6 +16,7 @@ class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100, required=True)
     message = forms.CharField(widget=forms.Textarea, required=True)
     cc_myself = forms.BooleanField(required=False)
+    captcha = ReCaptchaField()
 
     def send_email(self):
         """

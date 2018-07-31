@@ -8,6 +8,7 @@ myblog/bingo/static/*
 myblog/blog/static/*
 myblog/home/static/*
 myblog/polls/static/*
+myblog/myblog/static/*
 
 # Installer logs
 pip-log.txt

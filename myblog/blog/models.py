@@ -6,7 +6,7 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 
-from tinymce import models as tinymce_models
+from tinymce.models import HTMLField
 
 
 # Class for blog entries
@@ -19,7 +19,7 @@ class Entry(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     header_image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
     pub_date = models.DateTimeField('date published', default=datetime.now)
-    body = tinymce_models.HTMLField('Body')
+    body = HTMLField('Body')
     tags = models.ManyToManyField('Tag', related_name='entries', blank=True)
 
     def __str__(self):

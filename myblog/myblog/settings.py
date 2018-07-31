@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'tinymce',
     'captcha',
 ]
@@ -197,5 +198,7 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 TINYMCE_SPELLCHECKER = False
 
-#Enable NoCaptcha Recaptcha
+SITE_ID = 1
+
+# Enable NoCaptcha Recaptcha
 NOCAPTCHA = True

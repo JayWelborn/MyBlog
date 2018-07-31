@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.db import models
 
 # Third Party Imports
-from tinymce import HTMLField
+from tinymce import models as tinymce_models
 
 
 # Model to store info about Fresh Start Development
@@ -17,7 +17,7 @@ class BrandInfo(models.Model):
 
     title = models.CharField(max_length=30)
     sub_header = models.CharField(max_length=120)
-    description = HTMLField('description')
+    description = tinymce_models.HTMLField('description')
     pub_date = models.DateField(default=timezone.now)
 
     def __str__(self):
@@ -32,7 +32,7 @@ class About(models.Model):
 
     title = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
-    bio = HTMLField('bio')
+    bio = tinymce_models.HTMLField('bio')
     pub_date = models.DateField(default=timezone.now)
 
     def __str__(self):

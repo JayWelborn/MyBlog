@@ -14,19 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.conf.urls import include, url
+from django.urls import include, path
 from django.conf.urls.static import static
 
 from myblog.admin import blog_admin
 
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^bingo/', include('bingo.urls')),
-    url(r'^admin/', blog_admin.urls),
-    url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^', include('home.urls')),
+    path('polls/', include('polls.urls')),
+    path('blog/', include('blog.urls')),
+    path('bingo/', include('bingo.urls')),
+    path('admin/', blog_admin.urls),
+    path('tinymce/', include('tinymce.urls')),
+    path('', include('home.urls')),
 ]
 
 if settings.DEBUG:

@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from blog.models import Tag, Entry
 from polls.models import Question, Choice
-from home.models import About, Contact, FunFact, BrandInfo
+from home.models import About, Contact, FunFact
 from bingo.models import BingoBlock, BingoCard, FreeSpace
 
 
@@ -74,5 +74,4 @@ blog_admin.register(Question, QuestionAdmin)
 blog_admin.register(About)
 blog_admin.register(Contact)
 blog_admin.register(FunFact)
-blog_admin.register(BrandInfo)
 blog_admin.register(BingoCard, BingoAdmin)

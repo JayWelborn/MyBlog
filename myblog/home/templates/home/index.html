@@ -9,15 +9,25 @@
                                              design meets smart engineering."/>
     <meta property="og:image" content="http://www.jaywelborn.com{% static 'images/blog-profile.jpg' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'home/css/index.css' %}"/>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 {% endblock %}
 
 {% block jumbotron %}
     <div class="bg bg-index"></div>
     <div class="jumbotron">
         <div class="jumbotron-home">
-            <h1>{{ brand.title }}</h1>
+            <h1>Jay Welborn</h1>
             <hr>
-            <p>{{ brand.sub_header }}</p>
+            <div class="typed-wrapper">
+                <div id="typed-strings">
+                    <p>Software Engineer</p>
+                    <p>Web Dvlpoe</p>
+                    <p>Web Developer</p>
+                    <p>Musician</p>
+                    <p>Nerd</p>
+                </div>
+                <p id="typed"></p>
+            </div>
             <a href="{% url 'home:about'%}">Learn More</a>
         </div>
     </div>
@@ -93,4 +103,17 @@
         </div>
     </div>
 </section>
+
+<script>
+  var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 50,
+      backSpeed: 65,
+      backDelay: 500,
+      startDelay: 500,
+      loop: true,
+      showCursor: false,
+      smartBackspace: true
+  });
+</script>
 {% endblock %}

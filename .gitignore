@@ -3,11 +3,7 @@ __pycache__/
 *.pyc
 *$py.class
 
-# uncollected static files
-myblog/bingo/static/*
-myblog/blog/static/*
-myblog/home/static/*
-myblog/polls/static/*
+# collected static files
 myblog/myblog/static/*
 
 # Installer logs

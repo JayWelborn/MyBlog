@@ -2,95 +2,212 @@
 {% load static %}
 
 {% block header %}
-    <meta property="og:url" content="http://www.jaywelborn.com{% url 'home:index' %}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Jay Welborn Web Development"/>
-    <meta property="og:description" content="Welcome to JayWelborn.com, where responsive
+<meta property="og:url" content="http://www.jaywelborn.com{% url 'home:index' %}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Jay Welborn Web Development"/>
+<meta property="og:description" content="Welcome to JayWelborn.com, where responsive
                                              design meets smart engineering."/>
-    <meta property="og:image" content="http://www.jaywelborn.com{% static 'images/blog-profile.jpg' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'home/css/index.css' %}"/>
+<meta property="og:image" content="http://www.jaywelborn.com{% static 'images/blog-profile.jpg' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/index.css' %}"/>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 {% endblock %}
 
 {% block jumbotron %}
-    <div class="bg bg-index"></div>
-    <div class="jumbotron">
-        <div class="jumbotron-home">
-            <h1>{{ brand.title }}</h1>
-            <hr>
-            <p>{{ brand.sub_header }}</p>
-            <a href="{% url 'home:about'%}">Learn More</a>
+<div class="bg bg-index"></div>
+<div class="jumbotron">
+    <div class="jumbotron-home">
+        <h1>Jay Welborn</h1>
+        <hr>
+        <div class="typed-wrapper">
+            <div id="typed-strings">
+                <p>Software Engineer</p>
+                <p>Web Dvlpoe</p>
+                <p>Web Developer</p>
+                <p>Musician</p>
+                <p>Nerd</p>
+            </div>
+            <p id="typed"></p>
         </div>
+        <a href="{% url 'home:about'%}">Learn More</a>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-<section id="python-django" class="index-container">
+<section id="software-engineer" class="index-container">
     <div class="index-content">
         <div class="logo-container">
-            <a href="//www.python.org">
+            <a href="//www.python.org" target="_blank">
                 <img class="index-logo" alt="Python" title="Python"
-                     src="{% static 'images/python-logo.png' %}"/>
+                     src="{% static 'images/languages/python-logo.png' %}"/>
             </a>
-            <a href="www.djangoproject.com">
-                <img class="index-logo" alt="Django" title="Django"
-                     src="{% static 'images/django-logo-negative.png' %}"/>
+            <a href="https://www.java.com/en/" target="_blank">
+                <img class="index-logo" alt="Java" title="Java"
+                     src="{% static 'images/languages/java-logo.png' %}"/>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                <img class="index-logo" alt="JavaScript" title="JavaScript"
+                     src="{% static 'images/languages/JS.png' %}"/>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">
+                <img class="index-logo" alt="C" title="C"
+                     src="{% static 'images/languages/c-programming.png' %}"/>
             </a>
         </div>
         <div class="text-container">
-            <h1>Python &amp; Django</h1>
+            <h1>Software Engineer</h1>
             <hr>
             <p>
-                The Django framework allows me to develop scalable, maintainable Python web applications
-                quickly.
+                I like creating new things, and I love solving puzzles. Building
+                software puts my creativity and problem-solving skills to work
+                improving the lives of real people.
             </p>
         </div>
     </div>
 </section>
-<section id="html-css-javascript" class="index-container">
+<section id="web-developer" class="index-container">
     <div class="index-content">
         <div class="text-container">
-            <h1>HTML, CSS, &amp; Javascript</h1>
+            <h1>Web Developer</h1>
             <hr>
             <p>
-                HTML, CSS, and Javascript let me give your content the presentation it deserves.
+                Building software for the web is one of the fastest ways to get
+                an idea in front of its target audience.
             </p>
         </div>
         <div class="logo-container">
-            <a href="//www.w3schools.com/html/html5_intro.asp">
+            <a href="//www.w3schools.com/html/html5_intro.asp" target="_blank">
                 <img class="index-logo" alt="HTML5" title="HTML5"
-                     src="{% static 'images/HTML5-logo.png' %}"/>
+                     src="{% static 'images/languages/HTML5-logo.png' %}"/>
             </a>
-            <a href="//www.w3schools.com/css/css3_intro.asp">
+            <a href="//www.w3schools.com/css/css3_intro.asp" target="_blank">
                 <img class="index-logo" alt="CSS3" title="CSS3"
-                     src="{% static 'images/css-logo.png' %}"/>
+                     src="{% static 'images/languages/css-logo.png' %}"/>
             </a>
-            <a href="//www.javascript.com/">
-                <img class="index-logo" alt="Javascript" title="Javascript"
-                     src="{% static 'images/JS.png' %}"/>
+            <a href="//www.djangoproject.com" target="_blank">
+                <img class="index-logo" alt="Django" title="Django"
+                     src="{% static 'images/frameworks/django-logo-negative.png' %}"/>
+            </a>
+            <a href="//www.getbootstrap.com" target="_blank">
+                <img class="index-logo" alt="Bootstrap" title="Bootstrap"
+                     src="{% static 'images/frameworks/Bootstrap_logo.svg.png' %}"/>
+            </a>
+            <a href="//www.reactjs.com" target="_blank">
+                <img class="index-logo" alt="React" title="React"
+                     src="{% static 'images/frameworks/react.svg.png' %}"/>
             </a>
         </div>
     </div>
 </section>
-<section id="bootstrap-github" class="index-container">
-    <div class="index-content">
-        <div class="logo-container">
-            <a href="//getbootstrap.com/">
-                <img class="index-logo" alt="Bootstrap" title="Bootstrap"
-                     src="{% static 'images/Bootstrap_logo.svg.png' %}"/>
+<section id="my-work">
+    <h1>My Work</h1>
+    <div class="slideshow-container">
+        <div class="mySlides fader">
+            <div class="numbertext">1 / 4</div>
+            <a href="http://hazelvalleyhandmade.com" target="_blank">
+                <img src="{% static 'images/websites/hazel-valley.png' %}"
+                     alt="Hazel Valley Handmade" title="Hazel Valley"
+                     style="width:100%">
             </a>
-            <a href="https://github.com/">
-                <img class="index-logo" alt="Github" title="Github"
-                     src="{% static 'images/github-octocat.png' %}"/>
+            <a href="http://hazelvalleyhandmade.com" target="_blank">
+                <h3 class="text">Hazel Valley Handmade</h3>
             </a>
+
+            <p class="text">Small business e-commerce site.</p>
         </div>
-        <div class="text-container">
-            <h1>Bootstrap &amp; Github</h1>
-            <hr>
-            <p>
-                Bootstrap is a CSS framework that makes responsive, mobile-first design a breeze.
-                Github hosts my code in the cloud so I can work anytime from anywhere.
+        <div class="mySlides fader">
+            <div class="numbertext">2 / 4</div>
+            <a href="http://juancacosta.com" target="_blank">
+                <img src="{% static 'images/websites/juan-acosta.png' %}"
+                     alt="Juan Acosta" title="Juan Acosta"
+                     style="width:100%">
+            </a>
+            <a href="http://juancacosta.com/" target="_blank">
+                <h3 class="text">Juan Acosta</h3>
+            </a>
+            <p class="text">Publicity page for a musician.</p>
+        </div>
+        <div class="mySlides fader">
+            <div class="numbertext">3 / 4</div>
+            <a href="http://bingo.jaywelborn.com" target="_blank">
+                <img src="{% static 'images/websites/bingo.png' %}"
+                     alt="Bingo" title="Bingo"
+                     style="width:100%">
+            </a>
+            <a href="http://bingo.jaywelborn.com/" target="_blank">
+                <h3 class="text">Bingo</h3>
+            </a>
+            <p class="text">Create and play custom bingo cards.</p>
+        </div>
+        <div class="mySlides fader">
+            <div class="numbertext">4 / 4</div>
+            <a href="http://www.band.eur.army.mil" target="_blank">
+                <img src="{% static 'images/websites/usareur.png' %}"
+                     alt="USAREUR Band" title="USAREUR Band"
+                     style="width:100%">
+            </a>
+            <a href="http://www.band.eur.army.mil/" target="_blank">
+                <h3 class="text">US Army Europe Band and Chorus</h3>
+            </a>
+            <p class="text">
+                Website for the United States Army Europe Band and Chorus.
             </p>
         </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 </section>
+
+<script>
+    var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 50,
+        backSpeed: 65,
+        backDelay: 500,
+        startDelay: 500,
+        loop: true,
+        showCursor: false,
+        smartBackspace: true
+    });
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
 {% endblock %}

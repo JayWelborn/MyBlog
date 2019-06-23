@@ -6,7 +6,7 @@ from django.views.generic import TemplateView, ListView, FormView
 from django.contrib.messages.views import SuccessMessageMixin
 
 # Relative imports
-from .models import About, Contact, FunFact, BrandInfo
+from .models import About, Contact, FunFact
 from .forms import ContactForm
 
 
@@ -20,7 +20,6 @@ class IndexView(TemplateView):
         Get business info for home page
         """
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['brand'] = BrandInfo.objects.latest('pub_date')
         return context
 
 
@@ -32,12 +31,11 @@ class AboutView(ListView):
 
     def get_context_data(self, **kwargs):
         """
-        Populate list with random fun facts about me, and get brand info
+        Populate list with random fun facts about me
         """
         context = super(AboutView, self).get_context_data(**kwargs)
         all_facts = FunFact.objects.distinct()
         context['fun_fact_list'] = random.sample(list(all_facts), 3)
-        context['brand'] = BrandInfo.objects.latest('pub_date')
         return context
 
     def get_queryset(self):

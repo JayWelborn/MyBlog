@@ -121,6 +121,10 @@ Change color of gradient to match color scheme of site
     padding-bottom: 5px;
 }
 
+.jumbotron-home .typed-wrapper {
+    min-height: 75px;
+}
+
 .page-header {
     padding-top: 1.5%;
     font-family: 'Oswald';
@@ -141,6 +145,10 @@ Change color of gradient to match color scheme of site
     .page-header h1 {
         font-size: 300%;
     }
+
+    .jumbotron-home .typed-wrapper {
+        min-height: 35px;
+    }
 }
 
 @media screen and (max-height: 600px) {
@@ -157,6 +165,10 @@ Change color of gradient to match color scheme of site
     }
     .page-header h1 {
         font-size: 300%;
+    }
+
+    .jumbotron-home .typed-wrapper {
+        min-height: 35px;
     }
 }
 

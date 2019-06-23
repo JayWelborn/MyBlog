@@ -9,21 +9,6 @@ from django.db import models
 from tinymce import models as tinymce_models
 
 
-# Model to store info about Fresh Start Development
-class BrandInfo(models.Model):
-
-    class Meta:
-        verbose_name_plural = 'Brand Information'
-
-    title = models.CharField(max_length=30)
-    sub_header = models.CharField(max_length=120)
-    description = tinymce_models.HTMLField('description')
-    pub_date = models.DateField(default=timezone.now)
-
-    def __str__(self):
-        return self.title
-
-
 # Model to update "About Me" without re-writing html
 class About(models.Model):
 

@@ -5,7 +5,7 @@ django-tinymce4-lite==1.7.2
 jsmin==2.2.2
 olefile==0.44
 packaging==16.8
-Pillow==4.0.0
+Pillow==8.1.1
 pkg-resources==0.0.0
 pyenchant==1.6.8
 pyparsing==2.2.0

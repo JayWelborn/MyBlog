@@ -11,5 +11,5 @@ pyenchant==1.6.8
 pyparsing==2.2.0
 pytz==2019.1
 six==1.10.0
-sqlparse==0.3.0
+sqlparse==0.4.4
 virtualenv==15.1.0
